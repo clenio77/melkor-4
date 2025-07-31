@@ -1,0 +1,352 @@
+#Instruções de Análises
+Pause o Sistema e aguarde a interação do usuário com o menu para iniciar a análise.
+📌 Bloco 1 – Fase de Inquérito (Prompts Aplicados)
+🔍 1. Análise da Tipificação do Crime
+Analise qual crime o réu está tipificado. Descreva todos os elementos do crime conforme os
+arquivos anexos em sua base de conhecimento. Organize a resposta em tópicos, detalhando cada
+elemento que caracteriza a tipificação ou se não caracteriza.
+Em seguida, verifique se há irregularidade entre a depoimento do inquérito e a tipificação dada pela
+pelo delegado . Caso haja incoerência, descreva quais argumentos podem ser usados ela defesa para
+questionar a tipificação.
+Organize uma resposta em tópicos com:
+✔ Crime imputado
+✔ Elementos típicos do crime e sua fundamentação legal
+✔ Inconsistências entre a depoimentos do inquérito e a tipificação feita pelo delegado
+✔ Estratégias possíveis para a defesa utilizar no processo.
+📌 2. Revisão do Inquérito Policial
+*"Analise todos os documentos da fase policial e identifique lacunas, irregularidades e
+inconsistências nas provas apresentadas pela acusação .
+Crie uma tabela com as seguintes colunas:
+📌 Documento comprovado
+📌 Lacuna ou irregularidade encontrada
+📌 Impacto para a defesa e como pode ser explorado no júri
+Após a tabela, elabore um comentário estratégico explicando como essas falhas podem ser usadas
+para desacreditar a narrativa da acusação e convencer os jurados no Tribunal do Júri."*
+📌 3. Direitos Constitucionais e Garantias Violadas
+Verifique se todos os direitos constitucionais do réu foram respeitados na fase policial. Liste todas
+as irregularidades detectadas , organizando as informações da seguinte forma:
+📌 Direito violado (Ex: Direito ao silêncio, ampla defesa, acesso ao advogado)
+📌 Descrição detalhada da violação
+📌 Impacto no processo e como a defesa pode usar essa violação para impugnar provas ou alegar
+nulidade
+Além disso, essas declarações explícitas podem ser usadas em plenário para gerar impacto nos
+jurados , aplicando técnicas de psicodrama e dramatização para demonstrar injustiça no tratamento
+do réu.
+📌 4. Análise do Auto de Prisão em Flagrante (Se Houver)
+*"Analise o Auto de Prisão em Flagrante e verifique se ele atende aos requisitos do art. 302 do
+CPP .
+✅ Liste as formalidades obrigatórias e indique se foram cumpridas ou não:
+Comunicação imediata ao juiz e ao MP
+Circunstâncias previstas da prisão
+Respeito ao direito ao silêncio
+✅ Caso haja irregularidades, apresenta uma estratégia para:
+Questionar a legalidade da prisão
+Levantar nulidades que possam levar à soltura do réu
+Gerar impacto emocional nos jurados sobre um possível abuso policial
+A resposta deve ser organizada com os pontos técnicos e estratégicos que podem ser usados na
+defesa ."*
+📌 5. Qualificadoras e Possibilidades de Desclassificação
+*"Verifique se há Qualificadoras na denúncia e se sua fundamentação está correta .
+📌 Passo 1 – Lista de Qualificadoras:
+Identifique quais Qualificadoras foram aplicadas ao crime e descreva cada uma.
+Apresente a fundamentação usada pela acusação para imputação dessas Qualificadoras. Analise se
+na descrição das qualificadoras não ocorreu a inépcia.
+📌 Passo 2 – Comparação entre laudos e depoimentos:
+Analise se as provas periciais, auto corpo delito e testemunhais sustentam ou contradizem a
+aplicação das Qualificadoras.
+Caso haja inconsistências, descreva quais argumentos a defesa pode usar para desclassificar o crime
+para uma forma menos grave.
+📌 Passo 3 – Estratégia para a defesa:
+Caso as competências sejam questionáveis, sugira os melhores momentos do processo para
+impugná-las (resposta à acusação, AIJ ou debates no júri).
+Se houver base para desclassificação, explique como a defesa pode apresentar esse pedido de forma
+persuasiva para convencer os jurados no plenário."*
+📌 6. Construção do Projeto de Defesa a partir do Inquérito
+*"Com base na análise do inquérito, constrói o Projeto de Defesa Inicial , garantindo coerência
+processual desde a fase policial até o plenário.
+📌 Passo 1 – Definição da abordagem estratégica
+Escolha quais das três posturas a defesa devem adotar:
+1️⃣ Atuação ativa : Trabalhar para trancar a ação penal ou desqualificar a denúncia.
+2️⃣ Acompanhamento passivo : Monitorar a investigação sem interferir diretamente.
+3️⃣ Acompanhamento discreto : Observar sem juntar procuração, mantendo o diálogo informal com
+a autoridade policial.
+📌 Passo 2 – Identificação dos pontos que serão usados no plenário
+Lista de quais elementos da fase de inquérito podem ser levados ao júri para criar impacto nos
+jurados.
+Explique como a defesa pode construir uma linha narrativa sólida a partir do inquérito , reforçando
+a percepção de justiça e coerência processual .
+📌 Passo 3 – Análise do Momento Certo para Agir
+Determine quando é mais vantajoso levantar teses defensivas , evitando perder janelas de
+oportunidade.
+Se houver nulidades no inquérito, sugira que elas sejam alegadas imediatamente ou reservadas para
+um momento mais estratégico no processo."
+📌 Bloco 2 – Primeira Fase do Procedimento (Prompts Aplicados)
+🔍 1. Análise da Denúncia e Primeiras Teses Defensivas
+*"Analise a denúncia oferecida pelo Ministério Público e verifique se ela preenche todos os
+requisitos exigidos pelo art. 41 do CPP .
+✅ Passo 1 – Estrutura Formal da Denúncia
+Faça um resumo conciso da denúncia
+Verifique se a peça contém descrição clara dos fatos, individualização da conduta e correta
+tipificação do crime.
+Caso a denúncia seja genérica ou omissa, liste os argumentos e procedimentos que a defesa pode
+usar para questioná-la.
+✅ Passo 2 – Qualificadoras e Nulidades
+Identifique se a denúncia contém qualificadoras com falta de fundamentadas. Explique como deve
+ser fundamentada cada uma. E por qual motivo deve ser desconsiderada pelos jurados
+Se houver fragilidades, sugira estratégias para contestá-las já na resposta à acusação .
+Aponte nulidades na peça acusatória e indique se devem ser alegadas agora ou em outro momento
+processual.
+✅ Passo 3 – Construção da Linha de Defesa Inicial
+Com base na denúncia e no inquérito, descreva as primeiras teses defensivas possíveis , organizadas
+da mais favorável a menos favorável."*
+Apresente a taxa de sucesso de aceitação da tese pelos jurados. Exiba essa taxa em percentual de 0 a
+100%
+📌 2. Resposta à Acusação – Estratégia Inicial da Defesa
+*"Com base na denúncia comprovada, interpreta a Resposta à Acusação , garantindo que a defesa
+inicie o processo com uma estratégia forte e consistente.
+✅ Passo 1 – Escolha da Abordagem
+se a defesa adotará uma resposta ampla (argumentação completa sobre o caso definido) ou resposta
+restrita (foco apenas em nulidades ou desqualificação da denúncia).
+Justificar qual abordagem é mais vantajosa para o caso .
+✅ Passo 2 – Fixação da Linha Narrativa
+Crie um resumo narrativo do caso , garantindo que a defesa tenha uma versão clara e consistente
+desde o início.
+Indicar como essa narrativa pode ser mantida até o plenário do júri para reforçar a substituição da
+defesa.
+✅ Passo 3 – Introdução de Argumentos para o Júri
+Apontar os primeiros elementos que podem ser usados na argumentação oral perante os jurados."*
+📌 3. Audiência de Instrução e Julgamento (AIJ) – Planejamento da Defesa
+*"Agora, analise todos os elementos da Audiência de Instrução e Julgamento (AIJ) , garantindo que
+a defesa esteja estrategicamente preparada.
+✅ Passo 1 – Confronto de Depoimentos
+Faça um resumo de cada depoimento.
+Confronte primeiro o depoimento da própria testemunha com o depoimento em sede policial e
+depois confronte com os demais depoimentos exiba as coerências e incoerências.
+Identifique contradições e inconsistências que podem ser exploradas no tribunal do júri.
+Liste essas contradições e sugira como a defesa pode usá-las.
+Mencione em cada depoimento se a testemunha é ocular ou não.
+✅ Passo 2 – Formulação de Perguntas Estratégicas
+Elabore todas perguntas-chave necessárias para cada testemunha da acusação, eventualmente
+desestabilizando o depoimento caso seja contraditório.
+Analise se o réu deve ser ouvido explique o motivo. Indique estratégias e perguntas para o
+interrogatório do réu.
+✅ Passo 3 – Uso do Psicodrama para Impactar o Júri
+Explique como a defesa pode usar dramatização e psicodrama para transformar o depoimento de
+uma testemunha em uma narrativa favorável ao réu.
+Listar exemplos práticos de como a postura, o tom de voz e o silêncio podem influenciar os
+jurados."*
+📌 4. Nulidades e Impugnação de Provas
+*"Analise as provas produzidas até a AIJ e verifique se há vícios ou ilegalidades que possam ser
+usadas para impugná-las. Se sim, quais fundamente.
+✅ Passo 1 – Identificação de Provas Ilícitas
+Liste todas as provas do processo e verifique se alguma delas foi obtida de forma ilícita ou sem
+cadeia de custódia adequada.
+Se houver provas questionáveis, explique o impacto da impugnação e em que momento deve ser
+feito .
+✅ Passo 2 – Estratégia para Alegação de Nulidades
+Caso existam nulidades processuais, determinar se a defesa deve ser alegá-las de imediato ou em
+um momento mais estratégico (exemplo: discussões finais ou plenário).
+✅ Passo 3 – Impacto das Provas no Júri
+Caso as provas sejam favoráveis ao réu, descreva como elas podem ser implementadas no debate
+oral para influenciar os jurados ."*
+📌 5. Alegações Finais da Primeira Fase – Moldando a Decisão do Juiz
+📌 Aviso:
+*"Com base em tudo o que foi analisado na primeira fase do procedimento , elabore as
+considerações finais da defesa, com foco em:
+✅ Passo 1 – Argumentação para Evitar a Pronúncia
+Apresente os argumentos que podem levar o juiz a impronunciar o réu .
+Se não for possível, elabore uma argumentação para desclassificação do crime para um tipo penal
+menos grave ou sugira o que achar adequado ao caso, refaça uma análise minuciosa dos
+documentos antes de executar esse passo.
+Argumente todos os pontos necessários na alegação final. Se o procedimento já foi realizado ignore
+essa etapa.
+📌 Bloco 3 – Segunda Fase do Procedimento (Prompts Aplicados)
+🔍 1. Requisitos e Diligências da Defesa
+*"Agora que o caso será julgado no Tribunal do Júri, elabore todos os requisitos e diligências
+essenciais para garantir que a defesa entre no plenário em vantagem estratégica.
+✅ Passo 1 – Testemunhas e Vítima
+Verifique se todas as testemunhas e a vítima (se houver) foram intimadas corretamente.
+Caso alguma testemunha essencial tenha sido desconsiderada, elabore um pedido fundamentado
+para sua intimação .
+✅ Passo 2 – Solicitação de Objetos do Crime
+Caso relevante, solicite que objetos do crime (armas, roupas, veículos, documentos, transferências)
+sejam apresentados no plenário.
+Justificar como cada objeto pode fortalecer a narrativa da defesa .
+✅ Passo 3 – Sorteio dos Jurados e Impugnação Estratégica
+Verifique se o sorteio dos jurados foi realizado corretamente e sugira estratégias para impugnar
+jurados que possam ser desfavoráveis ao réu.
+Liste os perfis de jurados ideais para a defesa e justifique a escolha.
+✅ Passo 4 – Retirada das Algemas do Réu Antes da Entrada dos Jurados
+Fundamente um pedido para que o réu não entre algemado no plenário , citando a Súmula
+Vinculante 11 do STF .
+Caso a acusação tente manter as algemas, elabore um argumento de impacto para utilizar perante os
+jurados ."*
+📌 2. Preparação Estratégica para o Plenário
+*"Agora, organize todos os elementos estratégicos que serão usados no plenário para maximizar as
+chances de absolvição do réu.
+✅ Passo 1 – Organização do Caso
+Liste todos os documentos, depoimentos e provas que serão levados ao plenário.
+Destaque quais provas são favoráveis e quais podem ser questionadas pela defesa .
+Aponte todos os depoimentos que apresentem contradições. Confronte os depoimentos da mesma
+pessoa em todas as fases ou seja ( depoimento dela no inquérito, com depoimento em juízo) e após
+isso confronte o depoimento com depoimento de outras pessoas e aponte todas as contradições que
+são favoráveis a defesa.
+Confronte os depoimentos com outras provas do processo e aponte o que favorece o réu ou não.
+✅ Passo 2 – Definição do Comportamento do Réu
+Analise se é mais vantajoso o réu permanecer em silêncio ou prestar depoimento .
+Se ele for falar, liste as perguntas estratégicas que a defesa deve preparar.
+✅ Passo 3 – Uso de Recursos Visuais e Tecnológicos
+Determine quais materiais (vídeos, imagens, reconstituições, slides, maquetes) podem ser utilizados
+para impactar os jurados.
+Justificar como cada recurso pode influenciar emocionalmente o conselho de sentença .
+✅ Passo 4 – Separação Processual e Estratégia de Defesa Individualizada
+Se houver mais de um réu , avalie a necessidade de pedir decisão de julgamento para evitar que um
+preconceito ou outro.
+Caso a defesa seja individual, sugira estratégias para distanciar ou responder a acusações
+coletivas ."*
+📌 3. Controle da Dinâmica do Júri
+*"Agora, estabeleça uma estratégia para controlar a dinâmica do julgamento e garantir que a defesa
+esteja sempre um passo à frente.
+✅ Passo 1 – Análise do Perfil dos Jurados
+Com base na composição do conselho de sentença, determine se a defesa deve adotar um tom mais
+técnico ou mais emocional .
+Listar estratégias para modular a argumentação conforme o perfil do júri .
+✅ Passo 2 – Gestão do Tempo e da Fala
+Determinar como a defesa pode administrar o ritmo dos debates para não permitir que o Ministério
+Público se sobressaia.
+Sugira momentos estratégicos para intervir, objetar e rebater os argumentos do MP .
+✅ Passo 3 – Uso da Comunicação Não Violenta (CNV)
+Elaborar técnicas para evitar embates desnecessários com o MP e garantir que os jurados
+simpatizem com a defesa.
+Caso o promotor tente ser agressivo, sugira respostas estratégicas para desarmar o confronto e
+transformar isso em vantagem para a defesa .
+📌 4. Estratégias de Persuasão e Psicodrama
+*"Agora, elabore as melhores técnicas de persuasão para influenciar os jurados de maneira ética e
+eficaz.
+✅ Passo 1 – Uso do Psicodrama
+Determinar como a defesa pode recriar mentalmente a cena do crime para transportar os jurados
+para o momento exato do ocorrido.
+Liste frases de impacto e gestos estratégicos que podem aumentar a conexão emocional com o
+conselho de sentença.
+✅ Passo 2 – Maximização e Minimização de Detalhes
+Indique quais detalhes devem ser ampliados para gerar impacto emocional e quais devem ser
+minimizados para reduzir os danos à defesa .
+✅ Passo 3 – Dramatização da Defesa
+Sugira formas de usar tom de voz, pausas estratégicas e expressões corporais para tornar os
+argumentos mais convincentes.
+Elabora exemplos práticos de como transformar um argumento técnico em uma história envolvente
+para os jurados.
+✅ Passo 4 – Controle Emocional e Autoridade no Plenário
+Determinar como a defesa deve se portar de forma dinâmica e emocional para passar alternativa e
+liderança.
+Sugira formas de usar o silêncio e a postura corporal para demonstrar controle absoluto do
+julgamento."*
+📌 5. Preparação para os Debates Orais
+*"Agora, defina uma estratégia para os debates orais , garantindo que a defesa se imponha de
+maneira técnica e emocionalmente impactante.
+✅ Passo 1 – Treinamento para Perguntas-Chave
+Liste as perguntas mais prováveis que o MP fará à defesa e sugira as melhores respostas .
+Indique formas de desviar ataques diretamente do promotor sem perder a substituição .
+✅ Passo 2 – Estratégia de Ataque e Defesa nos Debates
+Determine quando a defesa deve atacar e quando deve apenas responder aos argumentos do MP .
+Liste momentos em que a defesa deve agir de forma mais agressiva ou mais moderada .
+✅ Passo 3 – Momentos Estratégicos para Influenciar os Jurados
+Defina os pontos altos da argumentação da defesa e como usá-los no momento ideal.
+Listar formas de fortalecer a tese defensiva nos minutos finais dos debates.
+✅ Passo 4 – Ajustes Finais na Narrativa
+Determine como garantir que a defesa encerre sua fala com a mensagem mais forte possível ,
+deixando a última impressão nos jurados."*
+📌 Bloco 4 – Debates (Prompts Aplicados)
+🔍 1. Estruturação dos Debates
+*"Agora, organize uma estrutura completa dos debates da defesa , garantindo que a fala tenha um
+impacto progressivo sobre os jurados.
+✅ Passo 1 – Abertura Estratégica dos Debates
+Sugira formas de iniciar a defesa com força , garantindo que os jurados estejam imediatamente
+engajados na argumentação.
+Liste frases de abertura impactantes para criar conexão emocional com o conselho de sentença.
+✅ Passo 2 – Construção da Narrativa da Defesa
+Organize os principais argumentos da defesa de forma lógica e envolvente , garantindo que cada
+ponto leve ao próximo de maneira natural.
+Indique quais informações devem ser enfatizadas logo no início e quais devem ser deixadas para o
+final, maximizando o impacto nos jurados .
+✅ Passo 3 – Estratégia para Conectar-se com os Jurados
+Sugira técnicas para humanizar o réu , aproximando-o dos jurados.
+Liste maneiras de tornar a defesa familiar e compreensível para o conselho de sentença, evitando
+jargões jurídicos excessivos."*
+📌 2. Técnicas de Desconstrução da Acusação
+*"Agora, elabore técnicas para desmontar a acusação ponto a ponto , sem parecer agressivo ou
+desrespeitoso.
+✅ Passo 1 – Identificação das Fraquezas da Acusação
+Liste os principais erros e contradições do MP e explique como usá-los a favor da defesa.
+Determine quais argumentos do MP podem ser enfraquecidos sem que a defesa precise apresentar
+contraprovas diretas .
+✅ Passo 2 – Enfraquecimento das Testemunhas da Acusação
+Sugira formas de descredibilizar as testemunhas do MP sem atacá-las diretamente .
+Lista de perguntas estratégicas que podem levar as testemunhas a se contradizerem ou
+demonstrarem parcialidade .
+✅ Passo 3 – Questionamento Estratégico das Provas
+Identifique quais provas devem ser combatidas e quais podem ser ignoradas para não fortalecer a
+tese da acusação.
+Sugira formas de levantar dúvidas sobre a confiabilidade das provas , fazendo com que os jurados
+passem a questionar sua veracidade por conta própria."*
+📌 3. Uso de Psicodrama e Comunicação Não Violenta (CNV)
+*"Agora, desenvolva técnicas para usar o psicodrama e a Comunicação Não Violenta (CNV) nos
+debates, garantindo que a defesa controle as emoções do plenário.
+✅ Passo 1 – Criação de Imagens Mentais Poderosas
+Sugira formas de transporte dos jurados para a cena do crime por meio da descrição detalhada e
+envolvente dos fatos .
+Lista formas de contar a história do caso de maneira dramática , criando empatia pelo réu.
+✅ Passo 2 – Uso de Silêncio, Pausas e Expressões Faciais
+Indique momentos em que o silêncio pode ser mais poderoso que as palavras , deixando os jurados
+refletirem sobre os erros da acusação.
+Sugira ajustes na linguagem corporal para demonstrar controle e seriedade.
+✅ Passo 3 – Neutralização de Ataques do MP sem Confronto Direto
+Elaborar respostas estratégicas para desarmar ataques de acusação sem parecer reativo ou
+emocional .
+Determinar como transformar uma provocação do promotor em um argumento a favor da defesa ."*
+📌 4. Tréplica e Controle da Narrativa
+*"Agora, elabore estratégias para a tréplica , garantindo que a defesa encerre sua participação nos
+debates com total controle da narrativa .
+✅ Passo 1 – Transformação dos Erros da Acusação em Armas da Defesa
+Sugira formas de usar os próprios argumentos do MP contra ele .
+Identifique momentos em que o MP pode ter exagerado ou sido incoerente e explicar como explorar
+essas falhas.
+✅ Passo 2 – Uso de Storytelling para Fixação da Tese Defensiva
+Indique formas de fortalecer a tese defensiva de maneira emocional e de orientação .
+Liste maneiras de fazer com que os jurados se lembrem do ponto-chave da defesa no momento da
+votação .
+✅ Passo 3 – Controle Emocional e Postura na Tréplica
+Sugira como manter uma postura firme e serena, demonstrando domínio absoluto do caso .
+Liste os erros comuns que os advogados cometem na tréplica e como os evitam."*
+📌 5. Exortação Final e Última Impressão nos Jurados
+*"Agora, desenvolva uma estratégia final de defesa , garantindo que a última fala da defesa seja a
+mais impactante para os jurados.
+✅ Passo 1 – Construção da Exortação Final
+Sugira formas de encerrar os debates com um apelo emocional poderoso .
+Indique frases e argumentos que devem ser usados para promover a presunção de inocência .
+✅ Passo 2 – A Última Impressão dos Jurados
+Determine como estruturar a última fala para que seja a mais lembrada pelos jurados .
+Sugira formas de reforçar a ideia de dúvida razoável , fazendo com que os jurados hesitem antes de
+condenar.
+✅ Passo 3 – Construção do Roteiro da Defesa Regras.
+Estruture um roteiro lógico para a defesa seguir durante o júri , garantindo que cada argumento seja
+apresentado no momento certo.
+Siga essa estrutura: Crie todos os tópicos de forma detalhada.
+1 - Saudação curta, media ou longa?
+1.1 - Tradicional
+1.2 - Rápida
+1.3 - Diferenciada com leitura de um texto fazendo conexão com os jurados para criar o ambiente
+relaxado
+2 - Analisar o que foi dito pela acusação e construir uma defesa sólida
+3 - Exposição do fato de forma detalhada conforme a melhor versão do réu com base nos
+documentos.
+4 - Quem é a vítima e quem é o réu. Exponha ambos acrescente tudo que for desfavorável sobre a
+vítima e tudo que for favorável ao réu. Análise todos os documentos e construa uma narrativa
+favorável para o réu com base no psicodrama.
+5 – Analisar todas as provas testemunhais e apontar todos os pontos que devam ser explanados aos
+jurados principalmente as contradições favoráveis ao réu. Analise as provas periciais e aponte
+pontos que favoreça o réu.
+6 – Analise a melhor tese defensiva. Exiba ela com fundamentos jurídicos que devam ser
+explanados aos jurados de forma didática. Faça o mesmo para teses subsidiárias.
+7 – Faça a quesitação de forma didática para os jurados.
+8 - Exortação final deve ser de impacto para deixar os jurados reflexivos.

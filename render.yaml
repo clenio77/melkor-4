@@ -1,0 +1,60 @@
+services:
+  # Serviço Web Principal - Django Backend
+  - type: web
+    name: melkor-backend
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "cd melkor_backend && gunicorn melkor_project.wsgi:application"
+    plan: starter
+    region: oregon
+    branch: master
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: DJANGO_SETTINGS_MODULE
+        value: melkor_project.settings
+      - key: DEBUG
+        value: false
+      - key: ALLOWED_HOSTS
+        value: melkor-backend.onrender.com,localhost,127.0.0.1
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: melkor-database
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: melkor-redis
+          property: connectionString
+      - key: OPENAI_API_KEY
+        sync: false  # Será configurado manualmente
+      - key: OPENAI_MODEL
+        value: gpt-4-1106-preview
+      - key: OPENAI_MAX_TOKENS
+        value: 4000
+      - key: ENVIRONMENT
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+      - key: DISABLE_COLLECTSTATIC
+        value: 1
+
+  # Banco de Dados PostgreSQL
+  - type: pserv
+    name: melkor-database
+    env: postgresql
+    plan: starter
+    region: oregon
+    ipAllowList: []
+    databases:
+      - name: melkor_production
+        user: melkor_user
+
+  # Redis para Cache
+  - type: redis
+    name: melkor-redis
+    plan: starter
+    region: oregon
+    ipAllowList: []

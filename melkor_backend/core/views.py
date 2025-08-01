@@ -272,8 +272,8 @@ class AnaliseViewSet(viewsets.ModelViewSet):
 
 class MenuViewSet(viewsets.ViewSet):
     """ViewSet para menu interativo"""
-    
-    permission_classes = [IsAuthenticated]
+
+    permission_classes = []  # Menu público
     
     @action(detail=False, methods=['get'])
     def opcoes(self, request):

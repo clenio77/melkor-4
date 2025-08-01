@@ -1,0 +1,27 @@
+# Desenvolvimento automatizado com CrewAI
+crewai>=0.28.8
+langchain>=0.1.20
+langchain-openai>=0.1.7
+python-decouple>=3.8
+pyyaml>=6.0.1
+jinja2>=3.1.4
+
+# Para o produto final
+django>=4.2.7
+djangorestframework>=3.14.0
+django-cors-headers>=4.3.1
+djangorestframework-simplejwt>=5.3.0
+openai>=1.13.3
+PyMuPDF==1.23.14
+pdfplumber==0.10.3
+python-multipart==0.0.6
+pillow==10.1.0
+psycopg2-binary==2.9.9
+redis==5.0.1
+celery==5.3.4
+
+# Desenvolvimento e testes
+pytest==7.4.3
+pytest-django==4.7.0
+black==23.11.0
+flake8==6.1.0

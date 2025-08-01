@@ -1,0 +1,94 @@
+# Configuração BMad Method para Melkor 3.0
+project:
+  name: "Melkor 3.0 - Tribunal do Júri"
+  version: "1.0.0"
+  description: "Sistema de análise jurídica com IA especializada em Tribunal do Júri"
+
+# Arquivos que o agente dev deve sempre carregar
+devLoadAlwaysFiles:
+  - "docs/persona-melkor.md"
+  - "docs/instrucoes-analises.md"
+  - "docs/metodologia.md"
+  - "development/standards/coding-standards.md"
+  - "development/standards/testing-strategy.md"
+
+# Estrutura do produto final
+product_structure:
+  backend:
+    framework: "Django 4.2"
+    api: "Django REST Framework"
+    database: "PostgreSQL 15"
+    cache: "Redis"
+    queue: "Celery + Redis"
+    ai_integration: "OpenAI GPT-4"
+    storage: "Local Files + Database"
+  
+  frontend:
+    framework: "Next.js 14"
+    styling: "TailwindCSS"
+    state_management: "React Context"
+    
+# Agentes BMad
+agents:
+  scrum_master:
+    name: "Bob"
+    role: "Scrum Master"
+    expertise: ["story_creation", "epic_breakdown", "task_definition"]
+    
+  developer:
+    name: "James"
+    role: "Senior Developer"
+    expertise: ["django", "react", "nextjs", "openai_integration"]
+    
+  qa:
+    name: "Sarah"
+    role: "QA Engineer"
+    expertise: ["testing", "code_review", "quality_assurance"]
+    
+  architect:
+    name: "Winston"
+    role: "Software Architect"
+    expertise: ["system_design", "architecture", "patterns"]
+
+# Workflow BMad
+workflow:
+  phases:
+    - "epic_analysis"
+    - "story_creation"
+    - "implementation"
+    - "quality_assurance"
+    - "deployment"
+
+# Épicos principais do Melkor 3.0
+epics:
+  - id: "E001"
+    title: "Configuração do Banco de Dados e Modelos"
+    description: "Implementar modelos Django para usuários, processos, documentos e análises"
+
+  - id: "E002"
+    title: "Sistema de Autenticação e Usuários"
+    description: "Implementar sistema de login JWT para advogados"
+
+  - id: "E003"
+    title: "Upload e Processamento de Documentos"
+    description: "Sistema para upload de PDFs e extração de texto com armazenamento"
+    
+  - id: "E004"
+    title: "Engine de Análise Jurídica (Melkor IA)"
+    description: "Implementar o agente Melkor com persona e prompts especializados"
+
+  - id: "E005"
+    title: "Interface de Menu e Navegação"
+    description: "Menu interativo com 5 blocos de análise e sistema de segurança"
+
+  - id: "E006"
+    title: "Sistema de Análise por Blocos"
+    description: "Implementar os 4 blocos de análise jurídica com subetapas"
+
+  - id: "E007"
+    title: "Sistema de Sessões e Persistência"
+    description: "Gerenciar sessões de análise e armazenar resultados no banco"
+
+  - id: "E008"
+    title: "Interface Frontend Responsiva"
+    description: "Interface Next.js com componentes interativos"

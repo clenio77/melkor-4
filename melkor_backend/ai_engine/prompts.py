@@ -559,6 +559,518 @@ DOCUMENTO PARA ANÁLISE:
     }
 }
 
+# BLOCO 3: SEGUNDA FASE DO PROCEDIMENTO
+BLOCO_3_PROMPTS = {
+    1: {
+        "titulo": "Requisitos e Diligências da Defesa",
+        "prompt": f"""
+{MELKOR_PERSONA}
+
+TAREFA: Análise de Requisitos e Diligências da Defesa
+
+Analise o documento e elabore estratégia para a segunda fase do procedimento:
+
+1. REQUISITOS PARA A DEFESA:
+   - Diligências necessárias após a pronúncia
+   - Provas a serem produzidas no plenário
+   - Testemunhas a serem arroladas
+   - Perícias complementares
+
+2. ANÁLISE DA SENTENÇA DE PRONÚNCIA:
+   - Fundamentação da decisão
+   - Quesitos formulados
+   - Possibilidade de recurso
+   - Teses mantidas para o júri
+
+3. ESTRATÉGIA PROBATÓRIA:
+   - Provas favoráveis à defesa
+   - Contradições a explorar
+   - Testemunhas-chave
+   - Documentos essenciais
+
+4. PREPARAÇÃO TÉCNICA:
+   - Estudo do caso para o júri
+   - Argumentos centrais
+   - Pontos fracos da acusação
+   - Narrativa defensiva
+
+5. DILIGÊNCIAS ESPECÍFICAS:
+   - Perícias de local revisitadas
+   - Oitiva de testemunhas adicionais
+   - Juntada de documentos
+   - Medidas cautelares
+
+Elabore um plano detalhado para a segunda fase.
+
+DOCUMENTO PARA ANÁLISE:
+{{documento_texto}}
+"""
+    },
+    2: {
+        "titulo": "Preparação Estratégica para o Plenário",
+        "prompt": f"""
+{MELKOR_PERSONA}
+
+TAREFA: Preparação Estratégica Completa para o Plenário do Júri
+
+Desenvolva estratégia abrangente para o julgamento:
+
+1. ANÁLISE DO CONSELHO DE SENTENÇA:
+   - Perfil socioeconômico dos jurados
+   - Possíveis preconceitos e vieses
+   - Estratégias de comunicação
+   - Linguagem adequada
+
+2. ESTRUTURAÇÃO DA DEFESA:
+   - Tese principal e subsidiárias
+   - Ordem de apresentação das provas
+   - Sequência lógica dos argumentos
+   - Momentos de impacto
+
+3. PREPARAÇÃO DO RÉU:
+   - Orientações comportamentais
+   - Vestimenta e postura
+   - Possível interrogatório
+   - Controle emocional
+
+4. ESTRATÉGIA DE COMUNICAÇÃO:
+   - Linguagem acessível aos jurados
+   - Uso de recursos visuais
+   - Técnicas de persuasão
+   - Comunicação não-violenta
+
+5. ANTECIPAÇÃO DA ACUSAÇÃO:
+   - Argumentos prováveis do MP
+   - Contra-argumentos preparados
+   - Pontos vulneráveis
+   - Estratégias de neutralização
+
+6. PLANEJAMENTO TEMPORAL:
+   - Distribuição do tempo
+   - Momentos cruciais
+   - Pausas estratégicas
+   - Gestão da atenção
+
+Crie um plano estratégico completo para o plenário.
+
+DOCUMENTO PARA ANÁLISE:
+{{documento_texto}}
+"""
+    },
+    3: {
+        "titulo": "Controle da Dinâmica do Júri",
+        "prompt": f"""
+{MELKOR_PERSONA}
+
+TAREFA: Estratégias para Controle da Dinâmica do Plenário
+
+Analise e desenvolva técnicas para influenciar positivamente o júri:
+
+1. LEITURA DO AMBIENTE:
+   - Observação dos jurados
+   - Reações não-verbais
+   - Momentos de atenção/dispersão
+   - Sinais de convencimento
+
+2. TÉCNICAS DE PERSUASÃO:
+   - Argumentação lógica
+   - Apelo emocional controlado
+   - Uso de analogias
+   - Exemplos práticos
+
+3. GESTÃO DA NARRATIVA:
+   - Construção da história defensiva
+   - Desconstrução da versão acusatória
+   - Criação de dúvida razoável
+   - Humanização do réu
+
+4. CONTROLE EMOCIONAL:
+   - Gestão das próprias emoções
+   - Influência no clima do plenário
+   - Momentos de tensão/alívio
+   - Uso estratégico do silêncio
+
+5. INTERAÇÃO COM JURADOS:
+   - Contato visual estratégico
+   - Linguagem corporal
+   - Tom de voz adequado
+   - Proximidade física
+
+6. ADAPTAÇÃO EM TEMPO REAL:
+   - Mudanças de estratégia
+   - Resposta a imprevistos
+   - Aproveitamento de oportunidades
+   - Correção de rumos
+
+Desenvolva um guia prático para controle da dinâmica.
+
+DOCUMENTO PARA ANÁLISE:
+{{documento_texto}}
+"""
+    },
+    4: {
+        "titulo": "Estratégias de Persuasão e Psicodrama",
+        "prompt": f"""
+{MELKOR_PERSONA}
+
+TAREFA: Aplicação de Técnicas Avançadas de Persuasão e Psicodrama
+
+Desenvolva estratégias sofisticadas de convencimento:
+
+1. TÉCNICAS DE PSICODRAMA:
+   - Reconstrução cênica dos fatos
+   - Dramatização de situações
+   - Uso do espaço físico
+   - Recursos audiovisuais
+
+2. COMUNICAÇÃO NÃO-VIOLENTA:
+   - Observação sem julgamento
+   - Expressão de sentimentos
+   - Identificação de necessidades
+   - Formulação de pedidos
+
+3. PSICOLOGIA DA PERSUASÃO:
+   - Princípios de influência
+   - Gatilhos mentais
+   - Vieses cognitivos
+   - Heurísticas de julgamento
+
+4. STORYTELLING JURÍDICO:
+   - Construção de narrativas
+   - Arco dramático
+   - Personagens e conflitos
+   - Resolução satisfatória
+
+5. TÉCNICAS RETÓRICAS:
+   - Uso de metáforas
+   - Repetição estratégica
+   - Contrastes e paradoxos
+   - Perguntas retóricas
+
+6. GESTÃO DE OBJEÇÕES:
+   - Antecipação de resistências
+   - Técnicas de neutralização
+   - Transformação em oportunidades
+   - Reforço da credibilidade
+
+Elabore um arsenal completo de técnicas persuasivas.
+
+DOCUMENTO PARA ANÁLISE:
+{{documento_texto}}
+"""
+    },
+    5: {
+        "titulo": "Preparação para os Debates Orais",
+        "prompt": f"""
+{MELKOR_PERSONA}
+
+TAREFA: Preparação Específica para os Debates Orais
+
+Estruture a preparação final para os debates no plenário:
+
+1. ESTRUTURA DOS DEBATES:
+   - Abertura impactante
+   - Desenvolvimento lógico
+   - Clímax argumentativo
+   - Encerramento memorável
+
+2. ARGUMENTAÇÃO PRINCIPAL:
+   - Tese central da defesa
+   - Provas sustentadoras
+   - Refutação da acusação
+   - Construção da dúvida
+
+3. TÉCNICAS ORATÓRIAS:
+   - Modulação da voz
+   - Gesticulação adequada
+   - Pausas dramáticas
+   - Ênfases estratégicas
+
+4. RECURSOS VISUAIS:
+   - Uso de documentos
+   - Apresentação de provas
+   - Demonstrações práticas
+   - Material de apoio
+
+5. GESTÃO DO TEMPO:
+   - Distribuição por temas
+   - Momentos de impacto
+   - Reserva para tréplica
+   - Flexibilidade tática
+
+6. PREPARAÇÃO PSICOLÓGICA:
+   - Controle da ansiedade
+   - Confiança na apresentação
+   - Adaptação a imprevistos
+   - Manutenção do foco
+
+Crie um roteiro detalhado para os debates.
+
+DOCUMENTO PARA ANÁLISE:
+{{documento_texto}}
+"""
+    }
+}
+
+# BLOCO 4: DEBATES NO JÚRI
+BLOCO_4_PROMPTS = {
+    1: {
+        "titulo": "Estruturação dos Debates",
+        "prompt": f"""
+{MELKOR_PERSONA}
+
+TAREFA: Estruturação Técnica dos Debates no Plenário
+
+Organize a estrutura completa dos debates orais:
+
+1. ABERTURA ESTRATÉGICA:
+   - Primeiro impacto nos jurados
+   - Apresentação da tese central
+   - Criação de empatia
+   - Estabelecimento de credibilidade
+
+2. DESENVOLVIMENTO ARGUMENTATIVO:
+   - Sequência lógica dos argumentos
+   - Apresentação das provas
+   - Desconstrução da acusação
+   - Construção da narrativa defensiva
+
+3. MOMENTOS DE CLÍMAX:
+   - Pontos de maior impacto
+   - Revelações estratégicas
+   - Contradições da acusação
+   - Apelos emocionais controlados
+
+4. GESTÃO DA ATENÇÃO:
+   - Manutenção do interesse
+   - Variação de ritmo
+   - Uso de pausas
+   - Interação com o júri
+
+5. ENCERRAMENTO PODEROSO:
+   - Síntese dos argumentos
+   - Apelo final
+   - Última impressão
+   - Chamada à ação (absolvição)
+
+6. FLEXIBILIDADE TÁTICA:
+   - Adaptação em tempo real
+   - Resposta a surpresas
+   - Mudanças de estratégia
+   - Aproveitamento de oportunidades
+
+Desenvolva um roteiro estruturado para os debates.
+
+DOCUMENTO PARA ANÁLISE:
+{{documento_texto}}
+"""
+    },
+    2: {
+        "titulo": "Técnicas de Desconstrução da Acusação",
+        "prompt": f"""
+{MELKOR_PERSONA}
+
+TAREFA: Desconstrução Sistemática da Tese Acusatória
+
+Desenvolva estratégias para desmontar a acusação:
+
+1. ANÁLISE DE CONTRADIÇÕES:
+   - Inconsistências nos depoimentos
+   - Falhas na cadeia probatória
+   - Versões conflitantes
+   - Lacunas investigativas
+
+2. QUESTIONAMENTO DE PROVAS:
+   - Validade das perícias
+   - Confiabilidade das testemunhas
+   - Autenticidade de documentos
+   - Vícios na coleta
+
+3. DESCONSTRUÇÃO DA NARRATIVA:
+   - Versões alternativas dos fatos
+   - Explicações plausíveis
+   - Cenários alternativos
+   - Dúvida razoável
+
+4. EXPOSIÇÃO DE VÍCIOS:
+   - Nulidades processuais
+   - Violações constitucionais
+   - Irregularidades investigativas
+   - Prejuízos à defesa
+
+5. TÉCNICAS RETÓRICAS:
+   - Perguntas devastadoras
+   - Exposição de absurdos
+   - Redução ao ridículo
+   - Inversão de perspectiva
+
+6. ESTRATÉGIAS PSICOLÓGICAS:
+   - Criação de desconfiança
+   - Questionamento de motivos
+   - Exposição de interesses
+   - Humanização do conflito
+
+Elabore um arsenal de desconstrução argumentativa.
+
+DOCUMENTO PARA ANÁLISE:
+{{documento_texto}}
+"""
+    },
+    3: {
+        "titulo": "Uso de Psicodrama e CNV",
+        "prompt": f"""
+{MELKOR_PERSONA}
+
+TAREFA: Aplicação Prática de Psicodrama e Comunicação Não-Violenta
+
+Implemente técnicas avançadas de comunicação e dramatização:
+
+1. PSICODRAMA NO JÚRI:
+   - Reconstrução de cenas
+   - Dramatização de situações
+   - Uso do espaço físico
+   - Envolvimento sensorial
+
+2. COMUNICAÇÃO NÃO-VIOLENTA:
+   - Observação objetiva
+   - Expressão de sentimentos
+   - Identificação de necessidades
+   - Formulação de pedidos claros
+
+3. TÉCNICAS DRAMÁTICAS:
+   - Mudança de perspectiva
+   - Inversão de papéis
+   - Simulação de situações
+   - Demonstrações práticas
+
+4. GESTÃO EMOCIONAL:
+   - Controle das próprias emoções
+   - Influência no clima emocional
+   - Criação de empatia
+   - Canalização de sentimentos
+
+5. RECURSOS CÊNICOS:
+   - Uso de objetos
+   - Movimentação estratégica
+   - Gestos significativos
+   - Expressões faciais
+
+6. IMPACTO PSICOLÓGICO:
+   - Criação de identificação
+   - Despertar de compaixão
+   - Humanização do réu
+   - Sensibilização do júri
+
+Desenvolva um roteiro de aplicação prática.
+
+DOCUMENTO PARA ANÁLISE:
+{{documento_texto}}
+"""
+    },
+    4: {
+        "titulo": "Tréplica e Controle da Narrativa",
+        "prompt": f"""
+{MELKOR_PERSONA}
+
+TAREFA: Estratégias para Tréplica e Controle Final da Narrativa
+
+Desenvolva técnicas para a fase final dos debates:
+
+1. PREPARAÇÃO PARA TRÉPLICA:
+   - Antecipação dos argumentos do MP
+   - Contra-argumentos preparados
+   - Pontos de refutação
+   - Estratégias de neutralização
+
+2. TÉCNICAS DE REFUTAÇÃO:
+   - Desconstrução imediata
+   - Exposição de falácias
+   - Contradições evidentes
+   - Inversão de argumentos
+
+3. CONTROLE DA NARRATIVA:
+   - Retomada da tese central
+   - Reforço dos pontos fortes
+   - Minimização dos pontos fracos
+   - Redirecionamento do foco
+
+4. GESTÃO DO TEMPO:
+   - Uso eficiente do tempo
+   - Priorização de argumentos
+   - Síntese poderosa
+   - Impacto final
+
+5. TÉCNICAS AVANÇADAS:
+   - Uso do silêncio
+   - Pausas dramáticas
+   - Mudanças de tom
+   - Gestos enfáticos
+
+6. ENCERRAMENTO ESTRATÉGICO:
+   - Última palavra impactante
+   - Síntese memorável
+   - Apelo final convincente
+   - Impressão duradoura
+
+Crie um guia para dominar a tréplica.
+
+DOCUMENTO PARA ANÁLISE:
+{{documento_texto}}
+"""
+    },
+    5: {
+        "titulo": "Exortação Final e Última Impressão",
+        "prompt": f"""
+{MELKOR_PERSONA}
+
+TAREFA: Elaboração da Exortação Final e Criação da Última Impressão
+
+Desenvolva a conclusão mais impactante possível:
+
+1. ESTRUTURA DA EXORTAÇÃO:
+   - Síntese dos argumentos centrais
+   - Retomada da tese principal
+   - Apelo à justiça
+   - Chamada à consciência
+
+2. TÉCNICAS RETÓRICAS FINAIS:
+   - Uso de metáforas poderosas
+   - Analogias marcantes
+   - Contrastes dramáticos
+   - Perguntas reflexivas
+
+3. APELO EMOCIONAL CONTROLADO:
+   - Humanização final do réu
+   - Consequências da condenação
+   - Impacto na família
+   - Responsabilidade dos jurados
+
+4. CRIAÇÃO DE DÚVIDA:
+   - Questionamentos finais
+   - Incertezas evidenciadas
+   - Riscos da condenação
+   - Princípio do in dubio pro reo
+
+5. ÚLTIMA IMPRESSÃO:
+   - Frase de encerramento marcante
+   - Imagem mental duradoura
+   - Sentimento de justiça
+   - Convocação à absolvição
+
+6. TÉCNICAS DE MEMORIZAÇÃO:
+   - Repetição de conceitos-chave
+   - Reforço da mensagem central
+   - Criação de âncoras mentais
+   - Impacto emocional duradouro
+
+Elabore uma exortação final inesquecível.
+
+DOCUMENTO PARA ANÁLISE:
+{{documento_texto}}
+"""
+    }
+}
+
 # Função para obter prompt específico
 def get_prompt(bloco: int, subetapa: int, documento_texto: str) -> str:
     """
@@ -576,8 +1088,8 @@ def get_prompt(bloco: int, subetapa: int, documento_texto: str) -> str:
     prompts_map = {
         1: BLOCO_1_PROMPTS,
         2: BLOCO_2_PROMPTS,
-        # 3: BLOCO_3_PROMPTS,  # Será implementado
-        # 4: BLOCO_4_PROMPTS,  # Será implementado
+        3: BLOCO_3_PROMPTS,
+        4: BLOCO_4_PROMPTS,
     }
     
     if bloco not in prompts_map:
@@ -587,7 +1099,7 @@ def get_prompt(bloco: int, subetapa: int, documento_texto: str) -> str:
         raise ValueError(f"Subetapa {subetapa} não existe no bloco {bloco}")
     
     prompt_template = prompts_map[bloco][subetapa]["prompt"]
-    return prompt_template.replace("{{documento_texto}}", documento_texto)
+    return prompt_template.format(documento_texto=documento_texto)
 
 
 def get_prompt_title(bloco: int, subetapa: int) -> str:
@@ -595,6 +1107,8 @@ def get_prompt_title(bloco: int, subetapa: int) -> str:
     prompts_map = {
         1: BLOCO_1_PROMPTS,
         2: BLOCO_2_PROMPTS,
+        3: BLOCO_3_PROMPTS,
+        4: BLOCO_4_PROMPTS,
     }
     
     if bloco in prompts_map and subetapa in prompts_map[bloco]:

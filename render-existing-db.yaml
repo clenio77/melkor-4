@@ -1,5 +1,6 @@
 services:
   # Serviço Web Principal - Django Backend
+  # USANDO BANCO POSTGRESQL EXISTENTE
   - type: web
     name: melkor-backend
     env: python
@@ -20,7 +21,7 @@ services:
       - key: SECRET_KEY
         generateValue: true
       - key: DATABASE_URL
-        sync: false  # Será configurado manualmente com seu banco existente
+        sync: false  # CONFIGURE MANUALMENTE COM SEU BANCO EXISTENTE
       - key: REDIS_URL
         fromService:
           type: redis
@@ -39,9 +40,7 @@ services:
       - key: DISABLE_COLLECTSTATIC
         value: 1
 
-  # Banco PostgreSQL existente será usado via DATABASE_URL manual
-
-  # Redis para Cache
+  # Redis para Cache (novo)
   - type: redis
     name: melkor-redis
     plan: starter

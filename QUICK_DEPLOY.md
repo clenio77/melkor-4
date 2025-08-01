@@ -7,23 +7,46 @@
 2. Acesse [render.com](https://render.com) e faça login
 3. Conecte sua conta GitHub
 
-### **PASSO 2: Deploy Automático (3 min)**
+### **PASSO 2: Escolher Tipo de Deploy**
+
+#### **OPÇÃO A: Banco Novo (Blueprint)**
 1. **No Render Dashboard:**
    - Clique em "New +" → "Blueprint"
    - Selecione repositório `melkor-4`
    - Branch: `master`
    - Clique em "Create New Blueprint"
 
+#### **OPÇÃO B: Banco Existente (Web Service)**
+1. **No Render Dashboard:**
+   - Clique em "New +" → "Web Service"
+   - Selecione repositório `melkor-4`
+   - Branch: `master`
+   - Build Command: `./build.sh`
+   - Start Command: `cd melkor_backend && gunicorn melkor_project.wsgi:application`
+
 2. **Aguarde o Build:**
    - ⏱️ Tempo: ~3-5 minutos
    - 📊 Acompanhe logs em tempo real
 
-### **PASSO 3: Configurar OpenAI (1 min)**
+### **PASSO 3: Configurar Variáveis (1 min)**
 1. **Após build concluído:**
    - Vá para serviço `melkor-backend`
    - Clique em "Environment"
-   - Edite: `OPENAI_API_KEY=sua-chave-aqui`
-   - Clique em "Save Changes"
+   - Configure:
+
+**Para Banco Novo (Blueprint):**
+```env
+OPENAI_API_KEY=sua-chave-aqui
+```
+
+**Para Banco Existente (Web Service):**
+```env
+DATABASE_URL=postgresql://user:pass@host:port/db
+OPENAI_API_KEY=sua-chave-aqui
+SECRET_KEY=sua-secret-key
+```
+
+2. **Clique em "Save Changes"**
 
 ### **PASSO 4: Acessar Sistema**
 ```

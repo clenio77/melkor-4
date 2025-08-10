@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Kermartin - Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>body{font-family:sans-serif;max-width:900px;margin:40px auto;padding:0 16px} table{border-collapse:collapse;width:100%} td,th{border:1px solid #ddd;padding:8px}</style>
+</head>
+<body>
+  <form method="post" action="{% url 'webui:logout' %}">{% csrf_token %}<button type="submit">Sair</button></form>
+  <h1>Seus Processos</h1>
+  <form method="post" action="{% url 'webui:novo_processo' %}">{% csrf_token %}
+    <input name="titulo" placeholder="Título do processo" required>
+    <button type="submit">Criar processo</button>
+  </form>
+  <hr>
+  <table>
+    <thead><tr><th>Título</th><th>Status</th><th>Ações</th></tr></thead>
+    <tbody>
+    {% for p in processos %}
+      <tr>
+        <td>{{ p.titulo }}</td>
+        <td>{{ p.get_status_display }}</td>
+        <td>
+          <a href="{% url 'webui:upload_documento' p.id %}">Upload documento</a> |
+          <a href="{% url 'webui:iniciar_analise' p.id %}">Analisar</a>
+        </td>
+      </tr>
+    {% empty %}
+      <tr><td colspan="3">Nenhum processo</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

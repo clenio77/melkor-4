@@ -1,0 +1,74 @@
+INFO 2025-08-09 16:46:46,963 document_processor 319204 136725924935360 Texto extraído com sucesso: 299420 caracteres
+WARNING 2025-08-09 16:46:55,012 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:46:55,012 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:21,141 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:21,141 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,317 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,318 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,318 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,323 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,323 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,323 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,327 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,327 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,327 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,332 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,332 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,332 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,336 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,336 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,336 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,340 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,340 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,341 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,344 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,344 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,344 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,347 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,348 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,348 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,352 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,352 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,352 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,356 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,356 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,356 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,360 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,360 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,360 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,363 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,364 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,364 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,368 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,369 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,369 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,373 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,373 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,373 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,377 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,377 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,377 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,380 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,380 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,381 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,384 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,384 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,385 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,389 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,390 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,390 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,393 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,393 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,393 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,395 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,395 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,395 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+WARNING 2025-08-09 16:47:39,400 security 319204 136725924935360 Documento muito grande: 299420 chars
+ERROR 2025-08-09 16:47:39,400 processor 319204 136725924935360 Erro na análise: Documento contém conteúdo suspeito
+ERROR 2025-08-09 16:47:39,400 processor 319204 136725924935360 Erro na análise do documento 347d6521-162e-4272-961f-e1c18b5d1e36: Documento contém conteúdo suspeito
+INFO 2025-08-09 16:47:39,404 processor 319204 136725924935360 Análise completa finalizada: 0.00s, 0 tokens
+ERROR 2025-08-09 19:52:35,614 processor 324608 132099069703872 Erro na chamada OpenAI: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4-turbo-preview in organization org-8DdZq7CKFneEHhYlrrpAekFd on tokens per min (TPM): Limit 30000, Used 29721, Requested 864. Please try again in 1.17s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+ERROR 2025-08-09 19:52:35,614 processor 324608 132099069703872 Erro na análise: Falha na comunicação com OpenAI: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4-turbo-preview in organization org-8DdZq7CKFneEHhYlrrpAekFd on tokens per min (TPM): Limit 30000, Used 29721, Requested 864. Please try again in 1.17s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+ERROR 2025-08-09 19:52:35,620 processor 324608 132099043481280 Erro na chamada OpenAI: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4-turbo-preview in organization org-8DdZq7CKFneEHhYlrrpAekFd on tokens per min (TPM): Limit 30000, Used 29711, Requested 864. Please try again in 1.15s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+ERROR 2025-08-09 19:52:35,621 processor 324608 132099043481280 Erro na análise: Falha na comunicação com OpenAI: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4-turbo-preview in organization org-8DdZq7CKFneEHhYlrrpAekFd on tokens per min (TPM): Limit 30000, Used 29711, Requested 864. Please try again in 1.15s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+INFO 2025-08-09 19:53:10,852 processor 324608 132099061311168 Análise concluída: Bloco 1.1 - 66.93s

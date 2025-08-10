@@ -11,11 +11,15 @@ from decouple import config
 
 from ..agents.scrum_master import ScrumMasterAgent
 from ..agents.developer import DeveloperAgent
-from ..agents.qa_agent import QAAgent
+# QA é opcional nesta fase; importar de forma tolerante
+try:
+    from ..agents.qa_agent import QAAgent  # type: ignore
+except Exception:  # noqa: BLE001 - tolerar ausência
+    QAAgent = None  # type: ignore
 
 
 class BMadOrchestrator:
-    """Orquestrador principal do BMad Method para Melkor 3.0"""
+    """Orquestrador principal do BMad Method para Kermartin 3.0"""
     
     def __init__(self):
         self.project_root = Path(__file__).parent.parent.parent
@@ -244,7 +248,7 @@ class BMadOrchestrator:
         print("🏗️ Criando estrutura do produto...")
         
         product_dirs = [
-            "product/backend/melkor_project",
+            "product/backend/kermartin_project",
             "product/backend/core",
             "product/backend/ai_engine",
             "product/backend/authentication",

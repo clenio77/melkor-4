@@ -48,7 +48,7 @@ class ScrumMasterAgent(BMadBaseAgent):
             Sua expertise está em transformar épicos complexos em histórias executáveis.
             
             Você entende profundamente:
-            - O projeto Melkor 3.0 (sistema jurídico com IA)
+            - O projeto Kermartin 3.0 (sistema jurídico com IA)
             - Arquitetura Django + PostgreSQL + Next.js
             - Integração com OpenAI para análise jurídica
             - Metodologia BMad de desenvolvimento guiado por documentos

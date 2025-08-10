@@ -236,7 +236,7 @@ class DeveloperAgent(BMadBaseAgent):
         return """
         product/
         ├── backend/
-        │   ├── melkor_project/
+        │   ├── kermartin_project/
         │   │   ├── settings.py
         │   │   ├── urls.py
         │   │   └── wsgi.py

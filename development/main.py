@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Ponto de entrada principal para o sistema de desenvolvimento automatizado BMad
-Executa o ciclo completo de desenvolvimento do Melkor 3.0
+Executa o ciclo completo de desenvolvimento do Kermartin 3.0
 """
 
 import os
@@ -28,15 +28,15 @@ def setup_environment():
         print("⚠️ Arquivo .env não encontrado. Criando template...")
         
         env_template = """
-# Configurações do Melkor 3.0 - BMad Development
+# Configurações do Kermartin 3.0 - BMad Development
 
 # OpenAI API
 OPENAI_API_KEY=your-openai-api-key-here
 
 # Database (PostgreSQL)
-DB_NAME=melkor_dev
-DB_USER=melkor_user
-DB_PASSWORD=melkor_pass
+DB_NAME=kermartin_dev
+DB_USER=kermartin_user
+DB_PASSWORD=kermartin_pass
 DB_HOST=localhost
 DB_PORT=5432
 
@@ -65,7 +65,7 @@ ENVIRONMENT=development
 def main():
     """Função principal"""
     
-    parser = argparse.ArgumentParser(description="BMad Method - Desenvolvimento Automatizado Melkor 3.0")
+    parser = argparse.ArgumentParser(description="BMad Method - Desenvolvimento Automatizado Kermartin 3.0")
     parser.add_argument(
         "command",
         choices=["setup", "create-stories", "implement", "full-cycle", "status", "single"],
@@ -83,7 +83,7 @@ def main():
     
     args = parser.parse_args()
     
-    print("🚀 BMad Method - Melkor 3.0 Development Automation")
+    print("🚀 BMad Method - Kermartin 3.0 Development Automation")
     print("=" * 60)
     
     # Configurar ambiente

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Menu de Análise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>body{font-family:sans-serif;max-width:800px;margin:40px auto;padding:0 16px} table{border-collapse:collapse;width:100%} td,th{border:1px solid #ddd;padding:8px}</style>
+</head>
+<body>
+  <a href="{% url 'webui:dashboard' %}">← Voltar</a>
+  <h1>Menu de Análise - {{ processo.titulo }}</h1>
+  {% for message in messages %}<div>{{ message }}</div>{% endfor %}
+
+  <h2>Opção Rápida</h2>
+  <form method="post">{% csrf_token %}
+    <label><input type="radio" name="modo" value="individual" checked> Análise Individual</label>
+    <label><input type="radio" name="modo" value="completa"> Análise Completa</label>
+    <div>
+      <label>Bloco</label>
+      <select name="bloco">
+        {% for b, subs in blocos.items %}
+          <option value="{{ b }}">Bloco {{ b }}</option>
+        {% endfor %}
+      </select>
+      <label>Subetapa</label>
+      <select name="subetapa">
+        {% for i in blocos.1 %}
+          <option value="{{ i }}">{{ i }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <button type="submit">Iniciar Análise</button>
+  </form>
+
+  <h2>Blocos e Subetapas</h2>
+  <table>
+    <thead><tr><th>Bloco</th><th>Subetapas</th></tr></thead>
+    <tbody>
+      {% for b, subs in blocos.items %}
+      <tr>
+        <td>{{ b }}</td>
+        <td>
+          {% for s in subs %}
+            <span>Subetapa {{ s }}</span>{% if not forloop.last %} | {% endif %}
+          {% endfor %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

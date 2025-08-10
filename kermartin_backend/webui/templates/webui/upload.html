@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Upload de Documento</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>body{font-family:sans-serif;max-width:600px;margin:40px auto;padding:0 16px}</style>
+</head>
+<body>
+  <a href="{% url 'webui:dashboard' %}">← Voltar</a>
+  <h1>Upload de PDF - {{ processo.titulo }}</h1>
+  {% for message in messages %}<div>{{ message }}</div>{% endfor %}
+  <form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <div>
+      <label>Tipo de documento</label>
+      <select name="tipo_documento">
+        <option value="inquerito">Inquérito Policial</option>
+        <option value="denuncia">Denúncia</option>
+        <option value="resposta_acusacao">Resposta à Acusação</option>
+        <option value="sentencia_pronuncia">Sentença de Pronúncia</option>
+        <option value="alegacoes_finais">Alegações Finais</option>
+        <option value="ata_julgamento">Ata de Julgamento</option>
+        <option value="outros">Outros</option>
+      </select>
+    </div>
+    <div>
+      <label>Arquivo PDF</label>
+      <input type="file" name="arquivo" accept="application/pdf" required>
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Resultado da Análise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>body{font-family:sans-serif;max-width:900px;margin:40px auto;padding:0 16px} pre{white-space:pre-wrap}</style>
+</head>
+<body>
+  <a href="{% url 'webui:dashboard' %}">← Voltar</a>
+  <h1>Resultados - Sessão {{ sessao.id }}</h1>
+  <p>Processo: {{ sessao.processo.titulo }} | Modo: {{ sessao.get_modo_analise_display }}</p>
+  {% if resultados %}
+    {% for r in resultados %}
+      <h3>Bloco {{ r.bloco }} - Subetapa {{ r.subetapa }} ({{ r.documento_nome }})</h3>
+      <pre>{{ r.resposta_ia }}</pre>
+      <p><small>Tokens: {{ r.tokens_total }} | Modelo: {{ r.modelo_usado }} | Tempo: {{ r.tempo_processamento }}s</small></p>
+      <hr>
+    {% endfor %}
+  {% else %}
+    <p>Ainda não há resultados. Recarregue em alguns instantes.</p>
+  {% endif %}
+</body>
+</html>

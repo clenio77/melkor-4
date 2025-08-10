@@ -1,4 +1,4 @@
-# Padrões de Codificação - Melkor 3.0
+# Padrões de Codificação - Kermartin 3.0
 
 ## 1. Padrões Gerais
 
@@ -102,8 +102,8 @@ urlpatterns = [
 
 ### Estrutura Obrigatória
 ```python
-class MelkorProcessor:
-    """Processador principal do agente Melkor"""
+class KermartinProcessor:
+    """Processador principal do agente Kermartin"""
     
     def __init__(self):
         self.client = OpenAI(api_key=settings.OPENAI_API_KEY)

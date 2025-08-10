@@ -95,7 +95,7 @@ Criar Dockerfile para backend e frontend.
 Criar docker-compose.yml para rodar tudo junto com PostgreSQL.
 
 ✅ Observações Importantes
-Baseie-se nas instruções contidas nos arquivos: Persona Melkor 3.0.pdf e Instruções de análise.pdf.
+Baseie-se nas instruções contidas nos arquivos: Persona Kermartin 3.0.pdf e Instruções de análise.pdf.
 
 Mantenha o sistema de análise dividido em blocos e subetapas conforme os prompts.
 

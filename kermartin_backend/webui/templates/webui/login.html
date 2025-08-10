@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Kermartin - Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>body{font-family:sans-serif;max-width:540px;margin:40px auto;padding:0 16px}</style>
+</head>
+<body>
+  <h1>Entrar</h1>
+  {% for message in messages %}<div style="color:red">{{ message }}</div>{% endfor %}
+  <form method="post">{% csrf_token %}
+    <div>
+      <label>Usuário (email)</label>
+      <input name="username" required>
+    </div>
+    <div>
+      <label>Senha</label>
+      <input name="password" type="password" required>
+    </div>
+    <button type="submit">Entrar</button>
+  </form>
+</body>
+</html>

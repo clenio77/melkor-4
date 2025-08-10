@@ -1,12 +1,12 @@
-# Configuração BMad Method para Melkor 3.0
+# Configuração BMad Method para Kermartin 3.0
 project:
-  name: "Melkor 3.0 - Tribunal do Júri"
+  name: "Kermartin 3.0 - Tribunal do Júri"
   version: "1.0.0"
   description: "Sistema de análise jurídica com IA especializada em Tribunal do Júri"
 
 # Arquivos que o agente dev deve sempre carregar
 devLoadAlwaysFiles:
-  - "docs/persona-melkor.md"
+  - "docs/persona-kermartin.md"
   - "docs/instrucoes-analises.md"
   - "docs/metodologia.md"
   - "development/standards/coding-standards.md"
@@ -59,7 +59,7 @@ workflow:
     - "quality_assurance"
     - "deployment"
 
-# Épicos principais do Melkor 3.0
+# Épicos principais do Kermartin 3.0
 epics:
   - id: "E001"
     title: "Configuração do Banco de Dados e Modelos"
@@ -74,8 +74,8 @@ epics:
     description: "Sistema para upload de PDFs e extração de texto com armazenamento"
     
   - id: "E004"
-    title: "Engine de Análise Jurídica (Melkor IA)"
-    description: "Implementar o agente Melkor com persona e prompts especializados"
+    title: "Engine de Análise Jurídica (Kermartin IA)"
+    description: "Implementar o agente Kermartin com persona e prompts especializados"
 
   - id: "E005"
     title: "Interface de Menu e Navegação"

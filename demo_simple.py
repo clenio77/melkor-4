@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Demonstração Simples do Melkor 3.0
+Demonstração Simples do Kermartin 3.0
 Mostra o sistema funcionando
 """
 
@@ -9,13 +9,13 @@ import sys
 import django
 
 # Configurar Django
-sys.path.append('/mnt/persist/workspace/melkor_backend')
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'melkor_project.settings')
+sys.path.append('/mnt/persist/workspace/kermartin_backend')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'kermartin_project.settings')
 django.setup()
 
 from django.contrib.auth.models import User
 from core.models import Usuario, Processo, Documento, SessaoAnalise
-from ai_engine.prompts import get_prompt, get_prompt_title, MELKOR_PERSONA
+from ai_engine.prompts import get_prompt, get_prompt_title, KERMARTIN_PERSONA
 
 def print_header(title):
     """Imprime cabeçalho formatado"""
@@ -28,10 +28,10 @@ def print_step(step, description):
     print(f"\n📋 PASSO {step}: {description}")
     print("-" * 40)
 
-def demo_melkor():
-    """Demonstração completa do Melkor 3.0"""
+def demo_kermartin():
+    """Demonstração completa do Kermartin 3.0"""
     
-    print_header("MELKOR 3.0 - SISTEMA DE ANÁLISE JURÍDICA FUNCIONANDO!")
+    print_header("KERMARTIN 3.0 - SISTEMA DE ANÁLISE JURÍDICA FUNCIONANDO!")
     
     print("""
     🎯 SISTEMA IMPLEMENTADO COM SUCESSO!
@@ -75,10 +75,10 @@ def demo_melkor():
     
     print("\n📋 BLOCOS 3 e 4: Estrutura pronta para implementação")
     
-    # PASSO 3: Mostrar persona do Melkor
-    print_step(3, "Demonstrando Persona do Melkor")
+    # PASSO 3: Mostrar persona do Kermartin
+    print_step(3, "Demonstrando Persona do Kermartin")
     
-    print("🎭 PERSONA MELKOR 3.0:")
+    print("🎭 PERSONA KERMARTIN 3.0:")
     print("✅ Advogado criminalista experiente")
     print("✅ Especialista em Tribunal do Júri")
     print("✅ Estrategista focado em absolvição")
@@ -130,7 +130,7 @@ def demo_melkor():
     # PASSO 7: Mostrar menu interativo
     print_step(7, "Menu interativo conforme especificações")
     
-    print("📋 MENU MELKOR 3.0:")
+    print("📋 MENU KERMARTIN 3.0:")
     print("1. Bloco 1 - Fase de Inquérito (6 subetapas)")
     print("2. Bloco 2 - Primeira Fase do Procedimento (5 subetapas)")
     print("3. Bloco 3 - Segunda Fase do Procedimento (5 subetapas)")
@@ -152,7 +152,7 @@ def demo_melkor():
     print("✅ Superusuário criado")
     
     # CONCLUSÃO
-    print_header("SISTEMA MELKOR 3.0 TOTALMENTE IMPLEMENTADO! 🎉")
+    print_header("SISTEMA KERMARTIN 3.0 TOTALMENTE IMPLEMENTADO! 🎉")
     
     print("""
     ✅ IMPLEMENTAÇÃO COMPLETA REALIZADA:
@@ -164,7 +164,7 @@ def demo_melkor():
     ✓ Migrações e banco configurado
     
     🧠 ENGINE DE IA:
-    ✓ Processador Melkor principal
+    ✓ Processador Kermartin principal
     ✓ 11 prompts especializados implementados
     ✓ Persona de advogado criminalista
     ✓ Sistema de cache e otimização
@@ -203,10 +203,10 @@ def demo_melkor():
     • Servidor: http://localhost:8000
     • Admin: http://localhost:8000/admin/ (admin/admin)
     • API: http://localhost:8000/api/
-    • Código: /mnt/persist/workspace/melkor_backend/
+    • Código: /mnt/persist/workspace/kermartin_backend/
     
-    🏆 MELKOR 3.0 PRONTO PARA USO!
+    🏆 KERMARTIN 3.0 PRONTO PARA USO!
     """)
 
 if __name__ == "__main__":
-    demo_melkor()
+    demo_kermartin()

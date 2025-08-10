@@ -1,6 +1,6 @@
-# 🚀 Melkor 3.0 - Desenvolvimento Automatizado com BMad Method
+# 🚀 Kermartin 3.0 - Desenvolvimento Automatizado com BMad Method
 
-Sistema de desenvolvimento automatizado usando **CrewAI** para construir o **Melkor 3.0**, um agente de IA especialista em análise jurídica para Tribunal do Júri.
+Sistema de desenvolvimento automatizado usando **CrewAI** para construir o **Kermartin 3.0**, um agente de IA especialista em análise jurídica para Tribunal do Júri.
 
 ## 📋 Visão Geral
 
@@ -12,7 +12,7 @@ Este projeto implementa o **BMad Method** (Desenvolvimento Guiado por Documentos
 
 ## 🏗️ Arquitetura do Produto Final
 
-**Melkor 3.0** será uma aplicação web completa:
+**Kermartin 3.0** será uma aplicação web completa:
 
 - **Backend**: Django + PostgreSQL + Redis
 - **Frontend**: Next.js + TailwindCSS  
@@ -26,7 +26,7 @@ Este projeto implementa o **BMad Method** (Desenvolvimento Guiado por Documentos
 ```bash
 # Clone o repositório
 git clone <repo-url>
-cd melkor-4
+cd kermartin-4
 
 # Instalar dependências
 pip install -r development/requirements.txt
@@ -44,9 +44,9 @@ Edite o arquivo `.env` criado automaticamente:
 OPENAI_API_KEY=sk-your-openai-key-here
 
 # Database
-DB_NAME=melkor_dev
-DB_USER=melkor_user
-DB_PASSWORD=melkor_pass
+DB_NAME=kermartin_dev
+DB_USER=kermartin_user
+DB_PASSWORD=kermartin_pass
 DB_HOST=localhost
 DB_PORT=5432
 
@@ -104,14 +104,14 @@ python development/main.py status
 python development/main.py setup --validate-only
 ```
 
-## 🎯 Épicos do Melkor 3.0
+## 🎯 Épicos do Kermartin 3.0
 
 | ID | Título | Descrição |
 |----|--------|-----------|
 | E001 | Configuração do Banco de Dados | Modelos Django para usuários, processos, documentos |
 | E002 | Sistema de Autenticação | Login JWT para advogados |
 | E003 | Upload e Processamento | Sistema de upload de PDFs com extração de texto |
-| E004 | Engine de Análise Jurídica | Agente Melkor com persona e prompts especializados |
+| E004 | Engine de Análise Jurídica | Agente Kermartin com persona e prompts especializados |
 | E005 | Interface de Menu | Menu interativo com 5 blocos de análise |
 | E006 | Sistema de Análise por Blocos | 4 blocos de análise jurídica com subetapas |
 | E007 | Sistema de Sessões | Gerenciar sessões de análise e persistência |
@@ -120,7 +120,7 @@ python development/main.py setup --validate-only
 ## 🔧 Estrutura do Projeto
 
 ```
-melkor-4/
+kermartin-4/
 ├── development/                 # Sistema de desenvolvimento automatizado
 │   ├── agents/                 # Agentes CrewAI (SM, Dev, QA)
 │   ├── config/                 # Configurações BMad
@@ -130,12 +130,12 @@ melkor-4/
 │   ├── implementations/        # Resultados das implementações
 │   └── main.py                 # Ponto de entrada
 │
-├── product/                    # Produto final (Melkor 3.0)
+├── product/                    # Produto final (Kermartin 3.0)
 │   ├── backend/                # Django + PostgreSQL
 │   └── frontend/               # Next.js
 │
 ├── docs/                       # Documentação original
-│   ├── persona-melkor.md       # Persona do advogado criminalista
+│   ├── persona-kermartin.md       # Persona do advogado criminalista
 │   ├── instrucoes-analises.md  # Instruções detalhadas dos 4 blocos
 │   └── metodologia.md          # Metodologia de desenvolvimento
 │
@@ -179,7 +179,7 @@ python development/main.py status
 ```bash
 # PostgreSQL Admin
 http://localhost:8080
-# User: admin@melkor.com / Pass: admin123
+# User: admin@kermartin.com / Pass: admin123
 
 # Redis Commander  
 http://localhost:8081

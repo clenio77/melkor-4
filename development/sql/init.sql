@@ -1,4 +1,4 @@
--- Script de inicialização do PostgreSQL para Melkor 3.0
+-- Script de inicialização do PostgreSQL para Kermartin 3.0
 -- Cria database, usuário e configurações iniciais
 
 -- Criar extensões necessárias
@@ -14,7 +14,7 @@ ALTER SYSTEM SET log_min_duration_statement = 1000;
 CREATE SCHEMA IF NOT EXISTS audit;
 
 -- Comentários informativos
-COMMENT ON DATABASE melkor_dev IS 'Database de desenvolvimento do Melkor 3.0 - Sistema de análise jurídica com IA';
+COMMENT ON DATABASE kermartin_dev IS 'Database de desenvolvimento do Kermartin 3.0 - Sistema de análise jurídica com IA';
 
 -- Configurar timezone
 SET timezone = 'America/Sao_Paulo';
@@ -31,7 +31,7 @@ $$ language 'plpgsql';
 -- Mensagem de sucesso
 DO $$
 BEGIN
-    RAISE NOTICE 'Database Melkor 3.0 inicializado com sucesso!';
+    RAISE NOTICE 'Database Kermartin 3.0 inicializado com sucesso!';
     RAISE NOTICE 'Timezone configurado para: %', current_setting('timezone');
     RAISE NOTICE 'Extensões instaladas: uuid-ossp, pg_trgm';
 END $$;

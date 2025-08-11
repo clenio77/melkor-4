@@ -12,7 +12,7 @@ from .security import SecurityValidator
 from django.conf import settings
 import time
 from .document_processor import DocumentProcessor
-from .retrieval import get_service, make_response
+from .retrieval import get_service, make_response, GraphRAGRetrieval
 
 logger = logging.getLogger('ai_engine')
 
@@ -287,5 +287,41 @@ class JurisprudenciaSugestoesView(APIView):
             return Response(resp)
         except Exception as e:
             logger.error(f"Erro nas sugestões de jurisprudência: {e}")
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class JurisprudenciaHealthView(APIView):
+    """Health check para GraphRAG/OpenAI/toggles."""
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        try:
+            graph_enabled = getattr(settings, 'JURIS_GRAPH_ENABLED', False)
+            graph_ok = None
+            if graph_enabled:
+                try:
+                    g = GraphRAGRetrieval()
+                    rows = g._run("RETURN 1 as ok", {})
+                    graph_ok = isinstance(rows, list)
+                except Exception:
+                    graph_ok = False
+
+            openai_key = bool(getattr(settings, 'OPENAI_API_KEY', ''))
+            embedding_model = getattr(settings, 'OPENAI_EMBEDDING_MODEL', 'text-embedding-3-small')
+            provider_default = getattr(settings, 'JURIS_RETRIEVAL_PROVIDER', 'simple')
+
+            return Response({
+                'graph': {
+                    'enabled': graph_enabled,
+                    'ok': graph_ok,
+                },
+                'openai': {
+                    'configured': openai_key,
+                    'embedding_model': embedding_model,
+                },
+                'retrieval_provider_default': provider_default,
+            })
+        except Exception as e:
+            logger.error(f"Erro no health de jurisprudência: {e}")
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 

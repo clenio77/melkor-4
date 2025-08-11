@@ -6,7 +6,7 @@ from django.urls import path
 from .views import (
     ProcessarDocumentoView, AnaliseIndividualView,
     AnaliseCompletaView, StatusSegurancaView,
-    JurisprudenciaSearchView, JurisprudenciaSugestoesView,
+    JurisprudenciaSearchView, JurisprudenciaSugestoesView, JurisprudenciaHealthView,
 )
 
 app_name = 'ai_engine'
@@ -19,4 +19,5 @@ urlpatterns = [
     # Jurisprudência (GraphRAG-ready): provider=? simple|graph|hybrid
     path('jurisprudencia/search/', JurisprudenciaSearchView.as_view(), name='jurisprudencia_search'),
     path('jurisprudencia/sugestoes/', JurisprudenciaSugestoesView.as_view(), name='jurisprudencia_sugestoes'),
+    path('jurisprudencia/health/', JurisprudenciaHealthView.as_view(), name='jurisprudencia_health'),
 ]

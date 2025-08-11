@@ -43,6 +43,23 @@ services:
       - key: JURIS_RETRIEVAL_PROVIDER
         value: simple
 
+
+  # Serviço Web Frontend - Next.js
+  - type: web
+    name: melkor-frontend
+    runtime: node
+    plan: starter
+    region: oregon
+    rootDir: product/frontend
+    buildCommand: "npm ci && npm run build"
+    startCommand: "npm run start"
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NEXT_PUBLIC_API_BASE
+        # aponte para seu backend do Render
+        value: https://melkor-backend.onrender.com
+
   # Banco PostgreSQL existente será usado via DATABASE_URL manual
 
   # Redis para Cache

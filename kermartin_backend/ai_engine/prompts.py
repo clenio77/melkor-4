@@ -564,7 +564,7 @@ BLOCO_3_PROMPTS = {
     1: {
         "titulo": "Requisitos e Diligências da Defesa",
         "prompt": f"""
-{MELKOR_PERSONA}
+{KERMARTIN_PERSONA}
 
 TAREFA: Análise de Requisitos e Diligências da Defesa
 
@@ -609,7 +609,7 @@ DOCUMENTO PARA ANÁLISE:
     2: {
         "titulo": "Preparação Estratégica para o Plenário",
         "prompt": f"""
-{MELKOR_PERSONA}
+{KERMARTIN_PERSONA}
 
 TAREFA: Preparação Estratégica Completa para o Plenário do Júri
 
@@ -660,7 +660,7 @@ DOCUMENTO PARA ANÁLISE:
     3: {
         "titulo": "Controle da Dinâmica do Júri",
         "prompt": f"""
-{MELKOR_PERSONA}
+{KERMARTIN_PERSONA}
 
 TAREFA: Estratégias para Controle da Dinâmica do Plenário
 
@@ -711,7 +711,7 @@ DOCUMENTO PARA ANÁLISE:
     4: {
         "titulo": "Estratégias de Persuasão e Psicodrama",
         "prompt": f"""
-{MELKOR_PERSONA}
+{KERMARTIN_PERSONA}
 
 TAREFA: Aplicação de Técnicas Avançadas de Persuasão e Psicodrama
 
@@ -762,7 +762,7 @@ DOCUMENTO PARA ANÁLISE:
     5: {
         "titulo": "Preparação para os Debates Orais",
         "prompt": f"""
-{MELKOR_PERSONA}
+{KERMARTIN_PERSONA}
 
 TAREFA: Preparação Específica para os Debates Orais
 
@@ -817,7 +817,7 @@ BLOCO_4_PROMPTS = {
     1: {
         "titulo": "Estruturação dos Debates",
         "prompt": f"""
-{MELKOR_PERSONA}
+{KERMARTIN_PERSONA}
 
 TAREFA: Estruturação Técnica dos Debates no Plenário
 
@@ -868,7 +868,7 @@ DOCUMENTO PARA ANÁLISE:
     2: {
         "titulo": "Técnicas de Desconstrução da Acusação",
         "prompt": f"""
-{MELKOR_PERSONA}
+{KERMARTIN_PERSONA}
 
 TAREFA: Desconstrução Sistemática da Tese Acusatória
 
@@ -919,7 +919,7 @@ DOCUMENTO PARA ANÁLISE:
     3: {
         "titulo": "Uso de Psicodrama e CNV",
         "prompt": f"""
-{MELKOR_PERSONA}
+{KERMARTIN_PERSONA}
 
 TAREFA: Aplicação Prática de Psicodrama e Comunicação Não-Violenta
 
@@ -970,7 +970,7 @@ DOCUMENTO PARA ANÁLISE:
     4: {
         "titulo": "Tréplica e Controle da Narrativa",
         "prompt": f"""
-{MELKOR_PERSONA}
+{KERMARTIN_PERSONA}
 
 TAREFA: Estratégias para Tréplica e Controle Final da Narrativa
 
@@ -1021,7 +1021,7 @@ DOCUMENTO PARA ANÁLISE:
     5: {
         "titulo": "Exortação Final e Última Impressão",
         "prompt": f"""
-{MELKOR_PERSONA}
+{KERMARTIN_PERSONA}
 
 TAREFA: Elaboração da Exortação Final e Criação da Última Impressão
 

@@ -5,12 +5,7 @@ Sistema de análise jurídica especializado em Tribunal do Júri
 
 import os
 from pathlib import Path
-<<<<<<< HEAD:melkor_backend/melkor_project/settings.py
-import dj_database_url
-from decouple import config
-=======
 from decouple import AutoConfig
->>>>>>> d5ce9f0 (feat(frontend): add Next.js app (auth, dashboard, processos, upload, análises individual/completa, resultados, segurança) and integrate with Django APIs; add OpenAI rate-limit backoff and chunking; update BMad orchestrator to tolerate missing QA agent; tweak settings and .env for safer limits):kermartin_backend/kermartin_project/settings.py
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -46,6 +41,7 @@ LOCAL_APPS = [
     'ai_engine',
     'authentication',
     'webui',
+    'juris',
 ]
 
 
@@ -88,18 +84,10 @@ WSGI_APPLICATION = 'kermartin_project.wsgi.application'
 
 # Database
 DATABASES = {
-<<<<<<< HEAD:melkor_backend/melkor_project/settings.py
-    'default': dj_database_url.config(
-        default=f'sqlite:///{BASE_DIR}/melkor_dev.sqlite3',
-        conn_max_age=600,
-        conn_health_checks=True,
-    )
-=======
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'kermartin_dev.sqlite3',
     }
->>>>>>> d5ce9f0 (feat(frontend): add Next.js app (auth, dashboard, processos, upload, análises individual/completa, resultados, segurança) and integrate with Django APIs; add OpenAI rate-limit backoff and chunking; update BMad orchestrator to tolerate missing QA agent; tweak settings and .env for safer limits):kermartin_backend/kermartin_project/settings.py
 }
 
 # Password validation
@@ -231,7 +219,6 @@ X_FRAME_OPTIONS = 'DENY'
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10 * 1024 * 1024  # 10MB
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10 * 1024 * 1024  # 10MB
 
-<<<<<<< HEAD:melkor_backend/melkor_project/settings.py
 # Configurações específicas para produção
 if not DEBUG:
     # Whitenoise para servir arquivos estáticos
@@ -257,12 +244,8 @@ if not DEBUG:
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
 
-# Melkor Specific Settings
-MELKOR_SETTINGS = {
-=======
 # Kermartin Specific Settings
 KERMARTIN_SETTINGS = {
->>>>>>> d5ce9f0 (feat(frontend): add Next.js app (auth, dashboard, processos, upload, análises individual/completa, resultados, segurança) and integrate with Django APIs; add OpenAI rate-limit backoff and chunking; update BMad orchestrator to tolerate missing QA agent; tweak settings and .env for safer limits):kermartin_backend/kermartin_project/settings.py
     'MAX_DOCUMENT_SIZE': 10 * 1024 * 1024,  # 10MB
     'ALLOWED_FILE_TYPES': ['pdf'],
     'ANALYSIS_TIMEOUT': 300,  # 5 minutes
@@ -275,3 +258,13 @@ KERMARTIN_SETTINGS = {
     'OPENAI_RETRY_BASE_DELAY_SEC': float(os.getenv('OPENAI_RETRY_BASE_DELAY_SEC', 1.5)),
     'OPENAI_CHUNK_SLEEP_SEC': float(os.getenv('OPENAI_CHUNK_SLEEP_SEC', 0.25)),
 }
+
+# Jurisprudence / GraphRAG toggles
+JURIS_GRAPH_ENABLED = config('JURIS_GRAPH_ENABLED', default=False, cast=bool)
+JURIS_RETRIEVAL_PROVIDER = config('JURIS_RETRIEVAL_PROVIDER', default='simple')
+JURIS_GRAPH_URL = config('JURIS_GRAPH_URL', default='bolt://localhost:7687')
+JURIS_GRAPH_USER = config('JURIS_GRAPH_USER', default='neo4j')
+JURIS_GRAPH_PASSWORD = config('JURIS_GRAPH_PASSWORD', default='')
+JURIS_GRAPH_TIMEOUT_MS = config('JURIS_GRAPH_TIMEOUT_MS', default=2000, cast=int)
+JURIS_RAG_VECTOR_STORE = config('JURIS_RAG_VECTOR_STORE', default='pgvector')
+JURIS_RAG_TOPK = config('JURIS_RAG_TOPK', default=8, cast=int)

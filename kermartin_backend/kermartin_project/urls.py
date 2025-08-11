@@ -23,6 +23,9 @@ urlpatterns = [
     # Core APIs
     path('api/', include('core.urls')),
 
+    # Juris CRUD (cadastro/importação manual)
+    path('api/', include('juris.urls')),
+
     # AI Engine
     path('api/ai/', include('ai_engine.urls')),
 

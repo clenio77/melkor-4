@@ -9,7 +9,10 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from .processor import KermartinProcessor
 from .security import SecurityValidator
+from django.conf import settings
+import time
 from .document_processor import DocumentProcessor
+from .retrieval import get_service, make_response
 
 logger = logging.getLogger('ai_engine')
 
@@ -188,24 +191,101 @@ class AnaliseCompletaView(APIView):
 
 class StatusSegurancaView(APIView):
     """View para status de segurança"""
-    
+
     permission_classes = [IsAuthenticated]
-    
+
     def get(self, request):
         """Retorna status de segurança"""
-        
+
         try:
             security = SecurityValidator()
             summary = security.get_security_summary()
-            
+
             return Response({
                 'success': True,
                 'seguranca': summary
             })
-            
+
         except Exception as e:
             logger.error(f"Erro ao obter status de segurança: {e}")
             return Response(
                 {'error': str(e)},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
+
+
+class JurisprudenciaSearchView(APIView):
+    """Search jurisprudence via provider (simple/graph/hybrid)."""
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        try:
+            provider = request.query_params.get('provider')
+            q = request.query_params.get('q')
+            filters = {
+                'tema': request.query_params.get('tema'),
+                'fase': request.query_params.get('fase'),
+                'bloco': request.query_params.get('bloco'),
+                'tribunal': request.query_params.get('tribunal'),
+                'vinculante': request.query_params.get('vinculante') or request.query_params.get('vinculancia'),
+                'dispositivo': request.query_params.get('dispositivo'),
+                'tese': request.query_params.get('tese'),
+            }
+            topk = int(request.query_params.get('topk', 8))
+
+            service = get_service(provider)
+            t0 = time.time()
+            items = service.search(q, filters, topk=topk)
+            latency_ms = int((time.time() - t0) * 1000)
+            # provider efetivo (em hybrid podemos ter fallback)
+            provider_default = provider or getattr(settings, 'JURIS_RETRIEVAL_PROVIDER', 'simple')
+            provider_effective = getattr(service, 'last_used', None) or provider_default
+            resp = make_response(items, provider_default)
+            resp.update({
+                'provider_effective': provider_effective,
+                'count': len(items),
+                'latency_ms': latency_ms,
+                'filters': filters,
+            })
+            return Response(resp)
+        except Exception as e:
+            logger.error(f"Erro na busca de jurisprudência: {e}")
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class JurisprudenciaSugestoesView(APIView):
+    """Suggestions by fase/bloco/tema with provider toggle."""
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        try:
+            provider = request.query_params.get('provider')
+            filters = {
+                'tema': request.query_params.get('tema'),
+                'fase': request.query_params.get('fase'),
+                'bloco': request.query_params.get('bloco'),
+                'tribunal': request.query_params.get('tribunal'),
+                'vinculante': request.query_params.get('vinculante') or request.query_params.get('vinculancia'),
+                'dispositivo': request.query_params.get('dispositivo'),
+                'tese': request.query_params.get('tese'),
+            }
+            topk = int(request.query_params.get('topk', 8))
+
+            service = get_service(provider)
+            t0 = time.time()
+            items = service.sugestoes(filters, topk=topk)
+            latency_ms = int((time.time() - t0) * 1000)
+            provider_default = provider or getattr(settings, 'JURIS_RETRIEVAL_PROVIDER', 'simple')
+            provider_effective = getattr(service, 'last_used', None) or provider_default
+            resp = make_response(items, provider_default)
+            resp.update({
+                'provider_effective': provider_effective,
+                'count': len(items),
+                'latency_ms': latency_ms,
+                'filters': filters,
+            })
+            return Response(resp)
+        except Exception as e:
+            logger.error(f"Erro nas sugestões de jurisprudência: {e}")
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+

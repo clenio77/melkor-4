@@ -6,6 +6,7 @@ Sistema de análise jurídica especializado em Tribunal do Júri
 import os
 from pathlib import Path
 from decouple import AutoConfig
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -89,6 +90,15 @@ DATABASES = {
         'NAME': BASE_DIR / 'kermartin_dev.sqlite3',
     }
 }
+
+# Use DATABASE_URL if provided (Render/Postgres)
+DATABASE_URL = config('DATABASE_URL', default='')
+if DATABASE_URL:
+    DATABASES['default'] = dj_database_url.config(
+        default=DATABASE_URL,
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [

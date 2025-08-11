@@ -6,7 +6,7 @@ from django.urls import path
 from .views import (
     ProcessarDocumentoView, AnaliseIndividualView,
     AnaliseCompletaView, StatusSegurancaView,
-    JurisprudenciaSearchView, JurisprudenciaSugestoesView, JurisprudenciaHealthView,
+    JurisprudenciaSearchView, JurisprudenciaSugestoesView, JurisprudenciaHealthView, InfraHealthView,
 )
 
 app_name = 'ai_engine'
@@ -20,4 +20,5 @@ urlpatterns = [
     path('jurisprudencia/search/', JurisprudenciaSearchView.as_view(), name='jurisprudencia_search'),
     path('jurisprudencia/sugestoes/', JurisprudenciaSugestoesView.as_view(), name='jurisprudencia_sugestoes'),
     path('jurisprudencia/health/', JurisprudenciaHealthView.as_view(), name='jurisprudencia_health'),
+    path('infra/health/', InfraHealthView.as_view(), name='infra_health'),
 ]

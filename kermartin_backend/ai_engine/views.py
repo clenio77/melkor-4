@@ -19,43 +19,43 @@ logger = logging.getLogger('ai_engine')
 
 class ProcessarDocumentoView(APIView):
     """View para processar documentos"""
-    
+
     permission_classes = [IsAuthenticated]
-    
+
     def post(self, request):
         """Processa documento PDF"""
-        
+
         documento_id = request.data.get('documento_id')
         if not documento_id:
             return Response(
                 {'error': 'documento_id é obrigatório'},
                 status=status.HTTP_400_BAD_REQUEST
             )
-        
+
         try:
             from core.models import Documento, Usuario
-            
+
             usuario = Usuario.objects.get(user=request.user)
             documento = Documento.objects.get(
                 id=documento_id,
                 processo__usuario=usuario
             )
-            
+
             processor = DocumentProcessor()
-            
+
             # Extrair texto
             texto = processor.extract_text_from_pdf(documento.arquivo_original.path)
-            
+
             # Analisar estrutura
             estrutura = processor.analyze_document_structure(texto)
-            
+
             # Extrair informações-chave
             info_chave = processor.extract_key_information(texto)
-            
+
             # Salvar texto extraído
             documento.texto_extraido = texto
             documento.save()
-            
+
             return Response({
                 'success': True,
                 'documento_id': str(documento.id),
@@ -64,7 +64,7 @@ class ProcessarDocumentoView(APIView):
                 'estrutura': estrutura,
                 'informacoes_chave': info_chave
             })
-            
+
         except Exception as e:
             logger.error(f"Erro ao processar documento: {e}")
             return Response(
@@ -75,37 +75,37 @@ class ProcessarDocumentoView(APIView):
 
 class AnaliseIndividualView(APIView):
     """View para análise individual"""
-    
+
     permission_classes = [IsAuthenticated]
-    
+
     def post(self, request):
         """Executa análise individual"""
-        
+
         data = request.data
         required_fields = ['documento_id', 'bloco', 'subetapa']
-        
+
         for field in required_fields:
             if field not in data:
                 return Response(
                     {'error': f'{field} é obrigatório'},
                     status=status.HTTP_400_BAD_REQUEST
                 )
-        
+
         try:
             from core.models import Documento, Usuario, SessaoAnalise
-            
+
             usuario = Usuario.objects.get(user=request.user)
             documento = Documento.objects.get(
                 id=data['documento_id'],
                 processo__usuario=usuario
             )
-            
+
             # Criar sessão temporária
             sessao = SessaoAnalise.objects.create(
                 processo=documento.processo,
                 modo_analise='individual'
             )
-            
+
             # Executar análise
             processor = KermartinProcessor()
             resultado = processor.analyze_document(
@@ -114,12 +114,12 @@ class AnaliseIndividualView(APIView):
                 int(data['subetapa']),
                 sessao
             )
-            
+
             return Response({
                 'success': True,
                 'resultado': resultado
             })
-            
+
         except Exception as e:
             logger.error(f"Erro na análise individual: {e}")
             return Response(
@@ -130,44 +130,44 @@ class AnaliseIndividualView(APIView):
 
 class AnaliseCompletaView(APIView):
     """View para análise completa"""
-    
+
     permission_classes = [IsAuthenticated]
-    
+
     def post(self, request):
         """Executa análise completa"""
-        
+
         processo_id = request.data.get('processo_id')
         blocos = request.data.get('blocos', [1, 2, 3, 4])
-        
+
         if not processo_id:
             return Response(
                 {'error': 'processo_id é obrigatório'},
                 status=status.HTTP_400_BAD_REQUEST
             )
-        
+
         try:
             from core.models import Processo, Usuario, SessaoAnalise
-            
+
             usuario = Usuario.objects.get(user=request.user)
             processo = Processo.objects.get(
                 id=processo_id,
                 usuario=usuario
             )
-            
+
             documentos = processo.documentos.filter(texto_extraido__isnull=False)
             if not documentos.exists():
                 return Response(
                     {'error': 'Processo não possui documentos processados'},
                     status=status.HTTP_400_BAD_REQUEST
                 )
-            
+
             # Criar sessão
             sessao = SessaoAnalise.objects.create(
                 processo=processo,
                 modo_analise='completa',
                 blocos_selecionados=blocos
             )
-            
+
             # Executar análise
             processor = KermartinProcessor()
             resultado = processor.analyze_complete_process(
@@ -175,12 +175,12 @@ class AnaliseCompletaView(APIView):
                 sessao,
                 blocos
             )
-            
+
             return Response({
                 'success': True,
                 'resultado': resultado
             })
-            
+
         except Exception as e:
             logger.error(f"Erro na análise completa: {e}")
             return Response(
@@ -324,4 +324,41 @@ class JurisprudenciaHealthView(APIView):
         except Exception as e:
             logger.error(f"Erro no health de jurisprudência: {e}")
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+
+class InfraHealthView(APIView):
+    """Health check para Redis e DB."""
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        from django.db import connection
+        import redis
+        import os
+        status_db = False
+        status_redis = None
+        err_db = None
+        err_redis = None
+        # DB check
+        try:
+            with connection.cursor() as cursor:
+                cursor.execute("SELECT 1")
+                cursor.fetchone()
+                status_db = True
+        except Exception as e:
+            err_db = str(e)
+        # Redis check
+        redis_url = getattr(settings, 'REDIS_URL', os.getenv('REDIS_URL'))
+        if redis_url:
+            try:
+                r = redis.Redis.from_url(redis_url)
+                pong = r.ping()
+                status_redis = bool(pong)
+            except Exception as e:
+                status_redis = False
+                err_redis = str(e)
+        return Response({
+            'db': {'ok': status_db, 'error': err_db},
+            'redis': {'ok': status_redis, 'error': err_redis},
+        })
 

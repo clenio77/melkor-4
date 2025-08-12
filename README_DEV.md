@@ -30,6 +30,15 @@ cp kermartin_backend/.env.example kermartin_backend/.env  # se existir
   make dev-frontend         # http://127.0.0.1:3000
   ```
 
+### Docker (opcional)
+```bash
+# subir stack completa (db, redis, backend, frontend)
+docker compose up --build
+
+# logs
+docker compose logs -f backend
+```
+
 ## Qualidade (lint/format)
 ```bash
 make lint                   # flake8, black --check, isort --check-only, ESLint

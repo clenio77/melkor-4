@@ -1,1 +1,1 @@
-# Management package for Melkor 3.0
+# Management package for Kermartin 3.0

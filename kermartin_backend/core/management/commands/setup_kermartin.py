@@ -1,5 +1,5 @@
 """
-Comando Django para configuração inicial do Melkor 3.0
+Comando Django para configuração inicial do Kermartin 3.0
 """
 
 import os
@@ -12,13 +12,13 @@ from core.models import Usuario
 class Command(BaseCommand):
     """Comando para configuração inicial do sistema"""
     
-    help = 'Configura o sistema Melkor 3.0 para primeira execução'
+    help = 'Configura o sistema Kermartin 3.0 para primeira execução'
     
     def add_arguments(self, parser):
         parser.add_argument(
             '--admin-email',
             type=str,
-            default='admin@melkor.com',
+            default='admin@kermartin.com',
             help='Email do administrador'
         )
         parser.add_argument(
@@ -42,7 +42,7 @@ class Command(BaseCommand):
         """Executa a configuração inicial"""
         
         self.stdout.write(
-            self.style.SUCCESS('🚀 Configurando Melkor 3.0...')
+            self.style.SUCCESS('🚀 Configurando Kermartin 3.0...')
         )
         
         try:
@@ -64,7 +64,7 @@ class Command(BaseCommand):
             self._verify_configuration()
             
             self.stdout.write(
-                self.style.SUCCESS('✅ Melkor 3.0 configurado com sucesso!')
+                self.style.SUCCESS('✅ Kermartin 3.0 configurado com sucesso!')
             )
             
             self._display_next_steps()
@@ -109,11 +109,11 @@ class Command(BaseCommand):
             # Criar perfil de usuário
             Usuario.objects.create(
                 user=user,
-                nome_completo='Administrador Melkor',
+                nome_completo='Administrador Kermartin',
                 oab_numero='000000',
                 oab_estado='SP',
                 telefone='(11) 99999-9999',
-                escritorio='Melkor Legal Tech'
+                escritorio='Kermartin Legal Tech'
             )
             
             self.stdout.write(f'  ✅ Superusuário criado: {email}')
@@ -146,10 +146,10 @@ class Command(BaseCommand):
         
         try:
             # Criar usuário de exemplo
-            if not User.objects.filter(username='demo@melkor.com').exists():
+            if not User.objects.filter(username='demo@kermartin.com').exists():
                 demo_user = User.objects.create_user(
-                    username='demo@melkor.com',
-                    email='demo@melkor.com',
+                    username='demo@kermartin.com',
+                    email='demo@kermartin.com',
                     password='demo123'
                 )
                 
@@ -168,7 +168,7 @@ class Command(BaseCommand):
             from core.models import Processo
             
             if not Processo.objects.exists():
-                usuario_demo = Usuario.objects.get(user__username='demo@melkor.com')
+                usuario_demo = Usuario.objects.get(user__username='demo@kermartin.com')
                 
                 Processo.objects.create(
                     usuario=usuario_demo,
@@ -179,7 +179,7 @@ class Command(BaseCommand):
                     vara='1ª Vara do Tribunal do Júri',
                     reu_nome='João da Silva',
                     vitima_nome='Maria Santos',
-                    observacoes='Processo de demonstração do sistema Melkor 3.0'
+                    observacoes='Processo de demonstração do sistema Kermartin 3.0'
                 )
                 
                 self.stdout.write('  ✅ Processo de demonstração criado')
@@ -243,7 +243,7 @@ class Command(BaseCommand):
         """Exibe próximos passos"""
         
         self.stdout.write('\n' + '='*60)
-        self.stdout.write(self.style.SUCCESS('🎉 MELKOR 3.0 CONFIGURADO COM SUCESSO!'))
+        self.stdout.write(self.style.SUCCESS('🎉 KERMARTIN 3.0 CONFIGURADO COM SUCESSO!'))
         self.stdout.write('='*60)
         
         self.stdout.write('\n📋 PRÓXIMOS PASSOS:')
@@ -259,7 +259,7 @@ class Command(BaseCommand):
         self.stdout.write('   APIs:  http://localhost:8000/api/')
         self.stdout.write('')
         self.stdout.write('4. 👤 Credenciais de acesso:')
-        self.stdout.write('   Email: admin@melkor.com')
+        self.stdout.write('   Email: admin@kermartin.com')
         self.stdout.write('   Senha: admin')
         self.stdout.write('')
         self.stdout.write('5. 📚 Documentação:')
@@ -269,5 +269,5 @@ class Command(BaseCommand):
         self.stdout.write('   python manage.py test')
         self.stdout.write('')
         self.stdout.write('='*60)
-        self.stdout.write(self.style.SUCCESS('🏆 MELKOR 3.0 PRONTO PARA USO!'))
+        self.stdout.write(self.style.SUCCESS('🏆 KERMARTIN 3.0 PRONTO PARA USO!'))
         self.stdout.write('='*60)

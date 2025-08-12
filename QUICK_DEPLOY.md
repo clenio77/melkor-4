@@ -1,4 +1,4 @@
-# ⚡ DEPLOY RÁPIDO - MELKOR 3.0
+# ⚡ DEPLOY RÁPIDO - KERMARTIN 3.0
 
 ## 🚀 Deploy em 5 Minutos no Render
 
@@ -12,17 +12,17 @@
 #### **OPÇÃO A: Banco Novo (Blueprint)**
 1. **No Render Dashboard:**
    - Clique em "New +" → "Blueprint"
-   - Selecione repositório `melkor-4`
+   - Selecione repositório `kermartin-4`
    - Branch: `master`
    - Clique em "Create New Blueprint"
 
 #### **OPÇÃO B: Banco Existente (Web Service)**
 1. **No Render Dashboard:**
    - Clique em "New +" → "Web Service"
-   - Selecione repositório `melkor-4`
+   - Selecione repositório `kermartin-4`
    - Branch: `master`
    - Build Command: `./build.sh`
-   - Start Command: `cd melkor_backend && gunicorn melkor_project.wsgi:application`
+   - Start Command: `cd kermartin_backend && gunicorn kermartin_project.wsgi:application`
 
 2. **Aguarde o Build:**
    - ⏱️ Tempo: ~3-5 minutos
@@ -30,7 +30,7 @@
 
 ### **PASSO 3: Configurar Variáveis (1 min)**
 1. **Após build concluído:**
-   - Vá para serviço `melkor-backend`
+   - Vá para serviço `kermartin-backend`
    - Clique em "Environment"
    - Configure:
 
@@ -50,12 +50,12 @@ SECRET_KEY=sua-secret-key
 
 ### **PASSO 4: Acessar Sistema**
 ```
-🌐 URL: https://melkor-backend.onrender.com
-🔧 Admin: https://melkor-backend.onrender.com/admin/
-📡 API: https://melkor-backend.onrender.com/api/
+🌐 URL: https://kermartin-backend.onrender.com
+🔧 Admin: https://kermartin-backend.onrender.com/admin/
+📡 API: https://kermartin-backend.onrender.com/api/
 
-👤 Login: admin@melkor.com
-🔑 Senha: MelkorAdmin2024!
+👤 Login: admin@kermartin.com
+🔑 Senha: KermartinAdmin2024!
 ```
 
 ## ✅ PRONTO! Sistema funcionando em produção!
@@ -70,7 +70,7 @@ O `render.yaml` já configura automaticamente:
 ✅ **PostgreSQL** - Banco de dados
 ✅ **Redis** - Cache
 ✅ **SSL/HTTPS** - Certificado automático
-✅ **Domínio** - melkor-backend.onrender.com
+✅ **Domínio** - kermartin-backend.onrender.com
 ✅ **Migrações** - Executadas automaticamente
 ✅ **Superusuário** - Criado automaticamente
 ✅ **Static Files** - Configurados com Whitenoise
@@ -128,4 +128,4 @@ Após deploy bem-sucedido:
 4. ✅ Configurar domínio personalizado (opcional)
 5. ✅ Configurar monitoramento (opcional)
 
-**🏆 Melkor 3.0 rodando em produção!**
+**🏆 Kermartin 3.0 rodando em produção!**

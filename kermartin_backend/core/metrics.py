@@ -1,5 +1,5 @@
 """
-Sistema de Métricas e Monitoramento para Melkor 3.0
+Sistema de Métricas e Monitoramento para Kermartin 3.0
 """
 
 import time
@@ -11,11 +11,11 @@ from django.core.cache import cache
 from django.utils import timezone
 from .models import Usuario, Processo, Documento, SessaoAnalise, ResultadoAnalise, LogSeguranca
 
-logger = logging.getLogger('melkor')
+logger = logging.getLogger('kermartin')
 
 
-class MelkorMetrics:
-    """Sistema de métricas do Melkor 3.0"""
+class KermartinMetrics:
+    """Sistema de métricas do Kermartin 3.0"""
     
     def __init__(self):
         self.cache_timeout = 300  # 5 minutos
@@ -23,7 +23,7 @@ class MelkorMetrics:
     def get_system_overview(self) -> Dict:
         """Visão geral do sistema"""
         
-        cache_key = 'melkor_system_overview'
+        cache_key = 'kermartin_system_overview'
         cached_data = cache.get(cache_key)
         
         if cached_data:
@@ -68,7 +68,7 @@ class MelkorMetrics:
     def get_user_metrics(self, user_id: int) -> Dict:
         """Métricas específicas de um usuário"""
         
-        cache_key = f'melkor_user_metrics_{user_id}'
+        cache_key = f'kermartin_user_metrics_{user_id}'
         cached_data = cache.get(cache_key)
         
         if cached_data:
@@ -115,7 +115,7 @@ class MelkorMetrics:
     def get_performance_metrics(self) -> Dict:
         """Métricas de performance do sistema"""
         
-        cache_key = 'melkor_performance_metrics'
+        cache_key = 'kermartin_performance_metrics'
         cached_data = cache.get(cache_key)
         
         if cached_data:
@@ -155,7 +155,7 @@ class MelkorMetrics:
     def get_security_metrics(self) -> Dict:
         """Métricas de segurança"""
         
-        cache_key = 'melkor_security_metrics'
+        cache_key = 'kermartin_security_metrics'
         cached_data = cache.get(cache_key)
         
         if cached_data:

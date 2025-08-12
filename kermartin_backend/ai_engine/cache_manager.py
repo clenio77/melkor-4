@@ -1,5 +1,5 @@
 """
-Sistema de Cache Avançado para Melkor 3.0
+Sistema de Cache Avançado para Kermartin 3.0
 Otimização de performance para análises de IA
 """
 
@@ -14,12 +14,12 @@ from datetime import datetime, timedelta
 logger = logging.getLogger('ai_engine')
 
 
-class MelkorCacheManager:
-    """Gerenciador de cache especializado para o Melkor"""
+class KermartinCacheManager:
+    """Gerenciador de cache especializado para o Kermartin"""
     
     def __init__(self):
-        self.default_timeout = getattr(settings, 'MELKOR_CACHE_TIMEOUT', 3600)  # 1 hora
-        self.prefix = 'melkor_3_0'
+        self.default_timeout = getattr(settings, 'KERMARTIN_CACHE_TIMEOUT', 3600)  # 1 hora
+        self.prefix = 'kermartin_3_0'
     
     def get_analysis_cache_key(self, documento_id: str, bloco: int, subetapa: int, content_hash: str = None) -> str:
         """Gera chave de cache para análise"""

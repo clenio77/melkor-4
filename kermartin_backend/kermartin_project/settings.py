@@ -6,7 +6,10 @@ Sistema de análise jurídica especializado em Tribunal do Júri
 import os
 from pathlib import Path
 from decouple import AutoConfig
-import dj_database_url
+try:
+    import dj_database_url  # type: ignore
+except Exception:  # pragma: no cover - optional in dev/test
+    dj_database_url = None  # type: ignore
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,11 +41,11 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    'core',
-    'ai_engine',
-    'authentication',
-    'webui',
-    'juris',
+    'kermartin_backend.core',
+    'kermartin_backend.ai_engine',
+    'kermartin_backend.authentication',
+    'kermartin_backend.webui',
+    'kermartin_backend.juris',
 ]
 
 
@@ -50,9 +53,9 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    'core.middleware.SecurityMiddleware',
-    'core.middleware.RateLimitMiddleware',
-    'core.middleware.PerformanceMiddleware',
+    'kermartin_backend.core.middleware.SecurityMiddleware',
+    'kermartin_backend.core.middleware.RateLimitMiddleware',
+    'kermartin_backend.core.middleware.PerformanceMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -60,10 +63,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'core.middleware.CORSMiddleware',
+    'kermartin_backend.core.middleware.CORSMiddleware',
 ]
 
-ROOT_URLCONF = 'kermartin_project.urls'
+ROOT_URLCONF = 'kermartin_backend.kermartin_project.urls'
 
 TEMPLATES = [
     {
@@ -81,7 +84,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'kermartin_project.wsgi.application'
+WSGI_APPLICATION = 'kermartin_backend.kermartin_project.wsgi.application'
 
 # Database
 DATABASES = {
@@ -93,8 +96,8 @@ DATABASES = {
 
 # Use DATABASE_URL if provided (Render/Postgres)
 DATABASE_URL = config('DATABASE_URL', default='')
-if DATABASE_URL:
-    DATABASES['default'] = dj_database_url.config(
+if DATABASE_URL and dj_database_url:
+    DATABASES['default'] = dj_database_url.config(  # type: ignore[attr-defined]
         default=DATABASE_URL,
         conn_max_age=600,
         conn_health_checks=True,
@@ -268,6 +271,10 @@ KERMARTIN_SETTINGS = {
     'OPENAI_RETRY_BASE_DELAY_SEC': float(os.getenv('OPENAI_RETRY_BASE_DELAY_SEC', 1.5)),
     'OPENAI_CHUNK_SLEEP_SEC': float(os.getenv('OPENAI_CHUNK_SLEEP_SEC', 0.25)),
 }
+
+# Rate limiting strategy
+# Preferir middleware centralizado; desabilita verificação em SecurityValidator
+USE_SECURITY_VALIDATOR_RATE_LIMIT = False
 
 # Jurisprudence / GraphRAG toggles
 JURIS_GRAPH_ENABLED = config('JURIS_GRAPH_ENABLED', default=False, cast=bool)

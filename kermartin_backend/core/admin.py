@@ -1,5 +1,5 @@
 """
-Configuração do Django Admin para Melkor 3.0
+Configuração do Django Admin para Kermartin 3.0
 """
 
 from django.contrib import admin
@@ -234,8 +234,8 @@ class LogSegurancaAdmin(admin.ModelAdmin):
 
 
 # Customização do Admin Site
-admin.site.site_header = "Melkor 3.0 - Administração"
-admin.site.site_title = "Melkor 3.0"
+admin.site.site_header = "Kermartin 3.0 - Administração"
+admin.site.site_title = "Kermartin 3.0"
 admin.site.index_title = "Sistema de Análise Jurídica"
 
 # Adicionar ações personalizadas

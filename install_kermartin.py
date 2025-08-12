@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script de Instalação Automática do Melkor 3.0
+Script de Instalação Automática do Kermartin 3.0
 Configura todo o sistema automaticamente
 """
 
@@ -11,8 +11,8 @@ import platform
 from pathlib import Path
 
 
-class MelkorInstaller:
-    """Instalador automático do Melkor 3.0"""
+class KermartinInstaller:
+    """Instalador automático do Kermartin 3.0"""
     
     def __init__(self):
         self.system = platform.system().lower()
@@ -114,7 +114,7 @@ class MelkorInstaller:
         
         self.print_step(2, "Criando Ambiente Virtual")
         
-        venv_path = "melkor_env"
+        venv_path = "kermartin_env"
         
         if os.path.exists(venv_path):
             print(f"⚠️ Ambiente virtual já existe: {venv_path}")
@@ -144,9 +144,9 @@ class MelkorInstaller:
         
         # Determinar comando pip no ambiente virtual
         if self.system == 'windows':
-            venv_pip = "melkor_env\\Scripts\\pip"
+            venv_pip = "kermartin_env\\Scripts\\pip"
         else:
-            venv_pip = "melkor_env/bin/pip"
+            venv_pip = "kermartin_env/bin/pip"
         
         # Atualizar pip
         self.run_command(
@@ -163,7 +163,7 @@ class MelkorInstaller:
         else:
             # Instalar dependências manualmente
             dependencies = [
-                'django>=4.2.0',
+                'django>=5.0',
                 'djangorestframework',
                 'djangorestframework-simplejwt',
                 'django-cors-headers',
@@ -190,18 +190,18 @@ class MelkorInstaller:
         
         # Determinar comando python no ambiente virtual
         if self.system == 'windows':
-            venv_python = "melkor_env\\Scripts\\python"
+            venv_python = "kermartin_env\\Scripts\\python"
         else:
-            venv_python = "melkor_env/bin/python"
+            venv_python = "kermartin_env/bin/python"
         
         # Entrar no diretório do backend
-        os.chdir('melkor_backend')
+        os.chdir('kermartin_backend')
         
         try:
-            # Executar setup do Melkor
+            # Executar setup do Kermartin
             self.run_command(
-                [venv_python, 'manage.py', 'setup_melkor', '--load-sample-data'],
-                "Configurando sistema Melkor"
+                [venv_python, 'manage.py', 'setup_kermartin', '--load-sample-data'],
+                "Configurando sistema Kermartin"
             )
             
         finally:
@@ -215,10 +215,10 @@ class MelkorInstaller:
         
         self.print_step(5, "Configurando Variáveis de Ambiente")
         
-        env_content = """# Configurações do Melkor 3.0
+        env_content = """# Configurações do Kermartin 3.0
 
 # Django
-SECRET_KEY=melkor-dev-secret-key-change-in-production
+SECRET_KEY=kermartin-dev-secret-key-change-in-production
 DEBUG=True
 ALLOWED_HOSTS=localhost,127.0.0.1
 
@@ -237,7 +237,7 @@ ENVIRONMENT=development
 LOG_LEVEL=INFO
 """
         
-        env_file = 'melkor_backend/.env'
+        env_file = 'kermartin_backend/.env'
         
         if os.path.exists(env_file):
             print(f"⚠️ Arquivo .env já existe: {env_file}")
@@ -255,12 +255,12 @@ LOG_LEVEL=INFO
         
         # Determinar comando python no ambiente virtual
         if self.system == 'windows':
-            venv_python = "melkor_env\\Scripts\\python"
+            venv_python = "kermartin_env\\Scripts\\python"
         else:
-            venv_python = "melkor_env/bin/python"
+            venv_python = "kermartin_env/bin/python"
         
         # Entrar no diretório do backend
-        os.chdir('melkor_backend')
+        os.chdir('kermartin_backend')
         
         try:
             # Executar testes
@@ -287,24 +287,24 @@ LOG_LEVEL=INFO
         self.print_header("🎉 INSTALAÇÃO CONCLUÍDA COM SUCESSO!")
         
         print("""
-✅ MELKOR 3.0 INSTALADO E CONFIGURADO!
+✅ KERMARTIN 3.0 INSTALADO E CONFIGURADO!
 
 🚀 PARA INICIAR O SISTEMA:
 
 1. Ative o ambiente virtual:""")
         
         if self.system == 'windows':
-            print("   melkor_env\\Scripts\\activate")
+            print("   kermartin_env\\Scripts\\activate")
         else:
-            print("   source melkor_env/bin/activate")
+            print("   source kermartin_env/bin/activate")
         
         print("""
 2. Configure sua OpenAI API Key:
-   Edite o arquivo melkor_backend/.env
+   Edite o arquivo kermartin_backend/.env
    OPENAI_API_KEY=sua-chave-aqui
 
 3. Inicie o servidor:
-   cd melkor_backend
+   cd kermartin_backend
    python manage.py runserver
 
 4. Acesse o sistema:
@@ -312,7 +312,7 @@ LOG_LEVEL=INFO
    APIs:  http://localhost:8000/api/
 
 5. Credenciais de acesso:
-   Email: admin@melkor.com
+   Email: admin@kermartin.com
    Senha: admin
 
 📚 DOCUMENTAÇÃO:
@@ -322,13 +322,13 @@ LOG_LEVEL=INFO
 🧪 EXECUTAR TESTES:
    python manage.py test
 
-🏆 MELKOR 3.0 PRONTO PARA USO!
+🏆 KERMARTIN 3.0 PRONTO PARA USO!
 """)
     
     def install(self):
         """Executa instalação completa"""
         
-        self.print_header("INSTALADOR AUTOMÁTICO DO MELKOR 3.0")
+        self.print_header("INSTALADOR AUTOMÁTICO DO KERMARTIN 3.0")
         
         print("""
 🎯 Este script irá:
@@ -349,8 +349,8 @@ LOG_LEVEL=INFO
         
         try:
             # Verificar se estamos no diretório correto
-            if not os.path.exists('melkor_backend'):
-                print("❌ Erro: Execute este script no diretório raiz do projeto Melkor")
+            if not os.path.exists('kermartin_backend'):
+                print("❌ Erro: Execute este script no diretório raiz do projeto Kermartin")
                 return False
             
             # Executar passos da instalação
@@ -383,7 +383,7 @@ LOG_LEVEL=INFO
 def main():
     """Função principal"""
     
-    installer = MelkorInstaller()
+    installer = KermartinInstaller()
     success = installer.install()
     
     if success:

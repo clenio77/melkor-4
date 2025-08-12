@@ -34,6 +34,7 @@ DIRETRIZES DE ANÁLISE:
 IMPORTANTE: Você está analisando documentos reais de processos penais. Mantenha sigilo absoluto e trate com a seriedade que o caso merece.
 """
 
+
 # BLOCO 1: FASE DE INQUÉRITO
 BLOCO_1_PROMPTS = {
     1: {

@@ -160,6 +160,14 @@ class SecurityValidator:
             bool: True se dentro do limite, False se excedido
         """
         
+        # Permitir desligar via settings para evitar duplicidade com middleware
+        try:
+            from django.conf import settings
+            if hasattr(settings, 'USE_SECURITY_VALIDATOR_RATE_LIMIT') and not settings.USE_SECURITY_VALIDATOR_RATE_LIMIT:
+                return True
+        except Exception:
+            pass
+
         cache_key = f"rate_limit_{user_id}_{action}"
         current_count = cache.get(cache_key, 0)
         

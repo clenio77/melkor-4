@@ -1,8 +1,8 @@
-# 🚀 DEPLOY DO MELKOR 3.0 NO RENDER
+# 🚀 DEPLOY DO KERMARTIN 3.0 NO RENDER
 
 ## 📋 Guia Completo para Deploy em Produção
 
-Este guia mostra como fazer deploy do Melkor 3.0 no Render usando deploy automático via GitHub.
+Este guia mostra como fazer deploy do Kermartin 3.0 no Render usando deploy automático via GitHub.
 
 ---
 
@@ -29,11 +29,11 @@ Este guia mostra como fazer deploy do Melkor 3.0 no Render usando deploy automá
 O repositório já está configurado com todos os arquivos necessários:
 
 ```
-melkor-4/
+kermartin-4/
 ├── render.yaml          # Configuração do Render
 ├── build.sh            # Script de build
 ├── requirements.txt    # Dependências de produção
-├── melkor_backend/     # Código Django
+├── kermartin_backend/  # Código Django
 └── DEPLOY_RENDER.md    # Este guia
 ```
 
@@ -52,7 +52,7 @@ melkor-4/
 ### **PASSO 3: Configurar Blueprint**
 
 1. **Selecionar Repositório:**
-   - Escolha o repositório `melkor-4`
+- Escolha o repositório `kermartin-4`
    - Branch: `master`
 
 2. **Configurar Serviços:**
@@ -88,7 +88,7 @@ melkor-4/
 Após o deploy inicial, configure as variáveis sensíveis:
 
 1. **No Dashboard do Render:**
-   - Vá para o serviço `melkor-backend`
+   - Vá para o serviço `kermartin-backend`
    - Clique em "Environment"
    - Adicione/edite:
 
@@ -113,16 +113,16 @@ EMAIL_HOST_PASSWORD=sua-senha-app
 
 ### **URLs do Sistema:**
 ```
-🌐 Frontend: https://melkor-backend.onrender.com
-🔧 Admin: https://melkor-backend.onrender.com/admin/
-📡 API: https://melkor-backend.onrender.com/api/
-📚 Docs: https://melkor-backend.onrender.com/api/docs/
+🌐 Frontend: https://kermartin-backend.onrender.com
+🔧 Admin: https://kermartin-backend.onrender.com/admin/
+📡 API: https://kermartin-backend.onrender.com/api/
+📚 Docs: https://kermartin-backend.onrender.com/api/docs/
 ```
 
 ### **Credenciais Iniciais:**
 ```
-👤 Email: admin@melkor.com
-🔑 Senha: MelkorAdmin2024!
+👤 Email: admin@kermartin.com
+🔑 Senha: KermartinAdmin2024!
 ```
 
 **⚠️ IMPORTANTE:** Altere a senha após primeiro acesso!
@@ -144,8 +144,8 @@ Para usar seu próprio domínio:
 2. **Configurar DNS:**
    ```
    Tipo: CNAME
-   Nome: melkor (ou subdomínio desejado)
-   Valor: melkor-backend.onrender.com
+   Nome: kermartin (ou subdomínio desejado)
+   Valor: kermartin-backend.onrender.com
    ```
 
 ### **2. Monitoramento com Sentry**
@@ -179,23 +179,23 @@ EMAIL_HOST_PASSWORD=sua-senha-de-app
 
 ### **1. Verificar Saúde do Sistema:**
 ```bash
-curl https://melkor-backend.onrender.com/api/menu/opcoes/
+curl https://kermartin-backend.onrender.com/api/menu/opcoes/
 ```
 
 ### **2. Testar Admin:**
-- Acesse: https://melkor-backend.onrender.com/admin/
+- Acesse: https://kermartin-backend.onrender.com/admin/
 - Login com credenciais iniciais
 - Verifique se dados estão carregados
 
 ### **3. Testar APIs:**
 ```bash
 # Testar menu
-curl https://melkor-backend.onrender.com/api/menu/opcoes/
+curl https://kermartin-backend.onrender.com/api/menu/opcoes/
 
 # Testar autenticação
-curl -X POST https://melkor-backend.onrender.com/api/auth/login/ \
+curl -X POST https://kermartin-backend.onrender.com/api/auth/login/ \
   -H "Content-Type: application/json" \
-  -d '{"username":"admin@melkor.com","password":"MelkorAdmin2024!"}'
+  -d '{"username":"admin@kermartin.com","password":"KermartinAdmin2024!"}'
 ```
 
 ---
@@ -270,7 +270,7 @@ python manage.py migrate
 ```bash
 # Ver logs em tempo real no dashboard
 # Ou via CLI do Render:
-render logs -s melkor-backend
+render logs -s kermartin-backend
 ```
 
 ---
@@ -333,7 +333,7 @@ render logs -s melkor-backend
 
 ## 🏆 CONCLUSÃO
 
-O Melkor 3.0 está agora configurado para deploy automático no Render com:
+O Kermartin 3.0 está agora configurado para deploy automático no Render com:
 
 ✅ **Deploy automático** via GitHub
 ✅ **Banco PostgreSQL** configurado

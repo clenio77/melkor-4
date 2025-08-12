@@ -2,10 +2,10 @@ services:
   # Serviço Web Principal - Django Backend
   # USANDO BANCO POSTGRESQL EXISTENTE
   - type: web
-    name: melkor-backend
+    name: kermartin-backend
     env: python
     buildCommand: "./build.sh"
-    startCommand: "cd melkor_backend && gunicorn melkor_project.wsgi:application"
+    startCommand: "cd kermartin_backend && gunicorn kermartin_project.wsgi:application"
     plan: starter
     region: oregon
     branch: master
@@ -13,11 +13,11 @@ services:
       - key: PYTHON_VERSION
         value: 3.11.0
       - key: DJANGO_SETTINGS_MODULE
-        value: melkor_project.settings
+        value: kermartin_project.settings
       - key: DEBUG
         value: false
       - key: ALLOWED_HOSTS
-        value: melkor-backend.onrender.com,localhost,127.0.0.1
+        value: kermartin-backend.onrender.com,localhost,127.0.0.1
       - key: SECRET_KEY
         generateValue: true
       - key: DATABASE_URL
@@ -25,12 +25,12 @@ services:
       - key: REDIS_URL
         fromService:
           type: redis
-          name: melkor-redis
+          name: kermartin-redis
           property: connectionString
       - key: OPENAI_API_KEY
         sync: false  # Será configurado manualmente
       - key: OPENAI_MODEL
-        value: gpt-4-1106-preview
+        value: gpt-4o-mini
       - key: OPENAI_MAX_TOKENS
         value: 4000
       - key: ENVIRONMENT
@@ -42,7 +42,7 @@ services:
 
   # Redis para Cache (novo)
   - type: redis
-    name: melkor-redis
+    name: kermartin-redis
     plan: starter
     region: oregon
     ipAllowList: []

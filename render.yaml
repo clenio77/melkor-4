@@ -1,7 +1,7 @@
 services:
   # Serviço Web Principal - Django Backend
   - type: web
-    name: melkor-backend
+    name: kermartin-backend
     runtime: python
     buildCommand: "./build.sh"
     startCommand: "cd kermartin_backend && gunicorn kermartin_project.wsgi:application"
@@ -16,7 +16,7 @@ services:
       - key: DEBUG
         value: "false"
       - key: ALLOWED_HOSTS
-        value: melkor-backend.onrender.com,localhost,127.0.0.1
+        value: kermartin-backend.onrender.com,localhost,127.0.0.1
       - key: SECRET_KEY
         generateValue: true
       - key: DATABASE_URL
@@ -24,7 +24,7 @@ services:
       - key: REDIS_URL
         fromService:
           type: redis
-          name: melkor-redis
+          name: kermartin-redis
           property: connectionString
       - key: OPENAI_API_KEY
         sync: false  # Configure manualmente
@@ -46,7 +46,7 @@ services:
 
   # Serviço Web Frontend - Next.js
   - type: web
-    name: melkor-frontend
+    name: kermartin-frontend
     runtime: node
     plan: starter
     region: oregon
@@ -58,13 +58,13 @@ services:
         value: 20
       - key: NEXT_PUBLIC_API_BASE
         # aponte para seu backend do Render
-        value: https://melkor-backend.onrender.com
+        value: https://kermartin-backend.onrender.com
 
   # Banco PostgreSQL existente será usado via DATABASE_URL manual
 
   # Redis para Cache
   - type: redis
-    name: melkor-redis
+    name: kermartin-redis
     plan: starter
     region: oregon
     ipAllowList: []

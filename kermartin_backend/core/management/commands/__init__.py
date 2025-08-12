@@ -1,1 +1,1 @@
-# Management commands for Melkor 3.0
+# Management commands for Kermartin 3.0

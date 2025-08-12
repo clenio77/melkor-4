@@ -14,15 +14,15 @@ Se você já tem um banco PostgreSQL no Render, **NÃO precisa criar outro!** Si
 
 1. **No Render Dashboard:**
    - Clique em "New +" → "Web Service"
-   - Conecte ao repositório `melkor-4`
+   - Conecte ao repositório `kermartin-4`
    - Branch: `master`
 
 2. **Configurações Básicas:**
    ```
-   Name: melkor-backend
+   Name: kermartin-backend
    Environment: Python
    Build Command: ./build.sh
-   Start Command: cd melkor_backend && gunicorn melkor_project.wsgi:application
+   Start Command: cd kermartin_backend && gunicorn kermartin_project.wsgi:application
    ```
 
 #### **PASSO 2: Configurar Variáveis de Ambiente**
@@ -38,9 +38,9 @@ Se você já tem um banco PostgreSQL no Render, **NÃO precisa criar outro!** Si
    DATABASE_URL=postgresql://user:password@host:port/database
    
    # Configurações obrigatórias
-   DJANGO_SETTINGS_MODULE=melkor_project.settings
+   DJANGO_SETTINGS_MODULE=kermartin_project.settings
    DEBUG=false
-   ALLOWED_HOSTS=melkor-backend.onrender.com,localhost,127.0.0.1
+   ALLOWED_HOSTS=kermartin-backend.onrender.com,localhost,127.0.0.1
    SECRET_KEY=sua-secret-key-aqui
    
    # OpenAI (configure sua chave)
@@ -60,12 +60,12 @@ Se quiser cache Redis:
 
 1. **Criar Redis Service:**
    - "New +" → "Redis"
-   - Name: `melkor-redis`
+   - Name: `kermartin-redis`
    - Plan: Starter
 
 2. **Adicionar ao Web Service:**
    ```env
-   REDIS_URL=redis://melkor-redis:6379/0
+   REDIS_URL=redis://kermartin-redis:6379/0
    ```
 
 ---
@@ -101,17 +101,17 @@ Se quiser cache Redis:
 
 1. **Conectar ao seu banco existente:**
    ```sql
-   -- Opcional: Criar schema separado para Melkor
-   CREATE SCHEMA IF NOT EXISTS melkor;
+   -- Opcional: Criar schema separado para Kermartin
+   CREATE SCHEMA IF NOT EXISTS kermartin;
    
    -- Ou usar database separado
-   CREATE DATABASE melkor_production;
+   CREATE DATABASE kermartin_production;
    ```
 
 2. **Verificar permissões:**
    ```sql
    -- Verificar se usuário tem permissões necessárias
-   GRANT ALL PRIVILEGES ON DATABASE melkor_production TO seu_usuario;
+   GRANT ALL PRIVILEGES ON DATABASE kermartin_production TO seu_usuario;
    ```
 
 ### **PASSO 2: Configurar DATABASE_URL**
@@ -123,14 +123,14 @@ postgresql://usuario:senha@host:porta/database
 
 **Exemplo:**
 ```
-DATABASE_URL=postgresql://melkor_user:senha123@dpg-abc123-a.oregon-postgres.render.com:5432/melkor_db
+DATABASE_URL=postgresql://kermartin_user:senha123@dpg-abc123-a.oregon-postgres.render.com:5432/kermartin_db
 ```
 
 ### **PASSO 3: Testar Conexão**
 
 Após configurar, o build.sh automaticamente:
 - ✅ Executa migrações
-- ✅ Cria tabelas do Melkor
+- ✅ Cria tabelas do Kermartin
 - ✅ Cria superusuário
 - ✅ Testa conexão
 
@@ -141,11 +141,11 @@ Após configurar, o build.sh automaticamente:
 ### **Backup do Banco Existente:**
 ```bash
 # Antes de fazer deploy, faça backup
-pg_dump -h host -U usuario -d database > backup_antes_melkor.sql
+pg_dump -h host -U usuario -d database > backup_antes_kermartin.sql
 ```
 
 ### **Isolamento de Dados:**
-- **Opção 1:** Usar schema separado (`melkor`)
+- **Opção 1:** Usar schema separado (`kermartin`)
 - **Opção 2:** Usar database separado
 - **Opção 3:** Usar prefixo nas tabelas
 
@@ -156,7 +156,7 @@ DATABASES = {
     'default': {
         # ... configuração normal ...
         'OPTIONS': {
-            'options': '-c search_path=melkor,public'
+            'options': '-c search_path=kermartin,public'
         }
     }
 }
@@ -178,10 +178,10 @@ DATABASES = {
 2. **Testar Acesso:**
    ```bash
    # Testar API
-   curl https://melkor-backend.onrender.com/api/menu/opcoes/
+   curl https://kermartin-backend.onrender.com/api/menu/opcoes/
    
    # Testar Admin
-   # Acesse: https://melkor-backend.onrender.com/admin/
+   # Acesse: https://kermartin-backend.onrender.com/admin/
    ```
 
 3. **Verificar Tabelas Criadas:**
@@ -189,7 +189,7 @@ DATABASES = {
    -- Conectar ao banco e verificar
    \dt  -- Listar tabelas
    
-   -- Deve mostrar tabelas do Melkor:
+   -- Deve mostrar tabelas do Kermartin:
    -- core_usuario
    -- core_processo
    -- core_documento
@@ -224,7 +224,7 @@ DATABASES = {
    pg_dump -h host -U user -d database --data-only > dados_existentes.sql
    ```
 
-2. **Após deploy do Melkor:**
+2. **Após deploy do Kermartin:**
    ```bash
    # Restaurar dados específicos se necessário
    psql -h host -U user -d database < dados_existentes.sql
@@ -277,4 +277,4 @@ SOLUÇÃO: Verificar se banco está vazio ou usar --fake-initial
 # 3. Deploy automático faz o resto!
 ```
 
-**🏆 Resultado: Melkor 3.0 rodando com seu banco existente!**
+**🏆 Resultado: Kermartin 3.0 rodando com seu banco existente!**

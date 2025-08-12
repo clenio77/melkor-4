@@ -12,10 +12,10 @@ Este projeto implementa o **BMad Method** (Desenvolvimento Guiado por Documentos
 
 ## 🏗️ Arquitetura do Produto Final
 
-**Kermartin 3.0** será uma aplicação web completa:
+**Kermartin 3.0** é uma aplicação web completa:
 
-- **Backend**: Django + PostgreSQL + Redis
-- **Frontend**: Next.js + TailwindCSS  
+- **Backend**: Django 5 + PostgreSQL + Redis
+- **Frontend**: Next.js 15 + TailwindCSS 4  
 - **IA**: OpenAI GPT-4 com persona de advogado criminalista
 - **Funcionalidade**: Análise de processos penais em 4 blocos especializados
 
@@ -29,7 +29,7 @@ git clone <repo-url>
 cd kermartin-4
 
 # Instalar dependências
-pip install -r development/requirements.txt
+pip install -r requirements.txt
 
 # Configurar ambiente
 python development/main.py setup
@@ -54,7 +54,7 @@ DB_PORT=5432
 REDIS_URL=redis://localhost:6379/0
 ```
 
-### 3. Iniciar Infraestrutura
+### 3. Iniciar Infraestrutura (opcional)
 
 ```bash
 # Subir PostgreSQL e Redis
@@ -65,7 +65,7 @@ docker-compose up -d
 docker-compose ps
 ```
 
-### 4. Executar Desenvolvimento Automatizado
+### 4. Executar Desenvolvimento Automatizado (BMAD)
 
 ```bash
 # Ciclo completo (recomendado)
@@ -206,6 +206,7 @@ O sistema segue TDD rigoroso:
 - **Padrões de Código**: `development/standards/coding-standards.md`
 - **Estratégia de Testes**: `development/standards/testing-strategy.md`
 - **Configuração BMad**: `development/config/core-config.yaml`
+- **API**: `API_DOCUMENTATION.md`
 
 ## 🤝 Contribuição
 

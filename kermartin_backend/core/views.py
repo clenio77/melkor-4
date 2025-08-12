@@ -14,6 +14,7 @@ from rest_framework.parsers import MultiPartParser, FormParser
 from ai_engine.processor import KermartinProcessor, SecurityError, OpenAIError
 from ai_engine.security import SecurityValidator
 from ai_engine.document_processor import DocumentProcessor
+import hashlib
 from .models import Usuario, Processo, Documento, SessaoAnalise, ResultadoAnalise
 from .serializers import (
     UsuarioSerializer, ProcessoSerializer, DocumentoSerializer,
@@ -127,7 +128,12 @@ class DocumentoViewSet(viewsets.ModelViewSet):
                 texto_extraido = processor.extract_text_from_pdf(documento.arquivo_original.path)
                 
                 documento.texto_extraido = texto_extraido
+                # Tamanho e hash para auditoria e deduplicação
                 documento.tamanho_arquivo = documento.arquivo_original.size
+                hasher = hashlib.sha256()
+                for chunk in documento.arquivo_original.chunks():
+                    hasher.update(chunk)
+                documento.hash_arquivo = hasher.hexdigest()
                 documento.save()
                 
                 logger.info(f"Documento processado: {documento.nome_arquivo}")

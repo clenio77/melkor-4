@@ -3,7 +3,7 @@
 
 set -o errexit  # Exit on error
 
-echo "🚀 Iniciando build do Melkor 3.0 para produção..."
+echo "🚀 Iniciando build do Kermartin 3.0 para produção..."
 
 # Atualizar pip
 echo "📦 Atualizando pip..."
@@ -14,7 +14,7 @@ echo "📦 Instalando dependências..."
 pip install -r requirements.txt
 
 # Entrar no diretório do Django
-cd melkor_backend
+cd kermartin_backend
 
 # Coletar arquivos estáticos
 echo "📁 Coletando arquivos estáticos..."
@@ -33,19 +33,19 @@ from core.models import Usuario
 # Criar superusuário se não existir
 if not User.objects.filter(is_superuser=True).exists():
     admin_user = User.objects.create_superuser(
-        username='admin@melkor.com',
-        email='admin@melkor.com',
-        password='MelkorAdmin2024!'
+        username='admin@kermartin.com',
+        email='admin@kermartin.com',
+        password='KermartinAdmin2024!'
     )
     
     # Criar perfil de usuário
     Usuario.objects.create(
         user=admin_user,
-        nome_completo='Administrador Melkor',
+        nome_completo='Administrador Kermartin',
         oab_numero='000000',
         oab_estado='SP',
         telefone='(11) 99999-9999',
-        escritorio='Melkor Legal Tech'
+        escritorio='Kermartin Legal Tech'
     )
     print("✅ Superusuário criado com sucesso")
 else:

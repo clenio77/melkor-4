@@ -6,16 +6,17 @@ project:
 
 # Arquivos que o agente dev deve sempre carregar
 devLoadAlwaysFiles:
-  - "docs/persona-kermartin.md"
-  - "docs/instrucoes-analises.md"
-  - "docs/metodologia.md"
+  # Ajustados para caminhos existentes no repositório
+  - "Persona Kermartin 3.0.txt"
+  - "Instruções de Análises.txt"
+  - "metodologia.md"
   - "development/standards/coding-standards.md"
   - "development/standards/testing-strategy.md"
 
 # Estrutura do produto final
 product_structure:
   backend:
-    framework: "Django 4.2"
+    framework: "Django 5"
     api: "Django REST Framework"
     database: "PostgreSQL 15"
     cache: "Redis"
@@ -24,7 +25,7 @@ product_structure:
     storage: "Local Files + Database"
   
   frontend:
-    framework: "Next.js 14"
+    framework: "Next.js 15"
     styling: "TailwindCSS"
     state_management: "React Context"
     

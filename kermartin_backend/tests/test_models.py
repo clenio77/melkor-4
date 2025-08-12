@@ -1,5 +1,5 @@
 """
-Testes para modelos do Melkor 3.0
+Testes para modelos do Kermartin 3.0
 """
 
 from django.test import TestCase
@@ -13,8 +13,8 @@ class TestUsuarioModel(TestCase):
     
     def setUp(self):
         self.user = User.objects.create_user(
-            username="test@melkor.com",
-            email="test@melkor.com",
+            username="test@kermartin.com",
+            email="test@kermartin.com",
             password="senha123"
         )
     
@@ -45,8 +45,8 @@ class TestUsuarioModel(TestCase):
         
         # Criar outro usuário
         user2 = User.objects.create_user(
-            username="test2@melkor.com",
-            email="test2@melkor.com",
+            username="test2@kermartin.com",
+            email="test2@kermartin.com",
             password="senha123"
         )
         
@@ -65,8 +65,8 @@ class TestProcessoModel(TestCase):
     
     def setUp(self):
         self.user = User.objects.create_user(
-            username="test@melkor.com",
-            email="test@melkor.com",
+            username="test@kermartin.com",
+            email="test@kermartin.com",
             password="senha123"
         )
         self.usuario = Usuario.objects.create(
@@ -112,8 +112,8 @@ class TestDocumentoModel(TestCase):
     
     def setUp(self):
         self.user = User.objects.create_user(
-            username="test@melkor.com",
-            email="test@melkor.com",
+            username="test@kermartin.com",
+            email="test@kermartin.com",
             password="senha123"
         )
         self.usuario = Usuario.objects.create(
@@ -156,8 +156,8 @@ class TestSessaoAnaliseModel(TestCase):
     
     def setUp(self):
         self.user = User.objects.create_user(
-            username="test@melkor.com",
-            email="test@melkor.com",
+            username="test@kermartin.com",
+            email="test@kermartin.com",
             password="senha123"
         )
         self.usuario = Usuario.objects.create(
@@ -205,8 +205,8 @@ class TestResultadoAnaliseModel(TestCase):
     
     def setUp(self):
         self.user = User.objects.create_user(
-            username="test@melkor.com",
-            email="test@melkor.com",
+            username="test@kermartin.com",
+            email="test@kermartin.com",
             password="senha123"
         )
         self.usuario = Usuario.objects.create(
@@ -276,8 +276,8 @@ class TestLogSegurancaModel(TestCase):
     
     def setUp(self):
         self.user = User.objects.create_user(
-            username="test@melkor.com",
-            email="test@melkor.com",
+            username="test@kermartin.com",
+            email="test@kermartin.com",
             password="senha123"
         )
         self.usuario = Usuario.objects.create(

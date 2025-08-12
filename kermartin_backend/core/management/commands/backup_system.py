@@ -1,5 +1,5 @@
 """
-Comando Django para backup do sistema Melkor 3.0
+Comando Django para backup do sistema Kermartin 3.0
 """
 
 import os
@@ -16,7 +16,7 @@ from core.models import Usuario, Processo, Documento, SessaoAnalise, ResultadoAn
 class Command(BaseCommand):
     """Comando para backup completo do sistema"""
     
-    help = 'Cria backup completo do sistema Melkor 3.0'
+    help = 'Cria backup completo do sistema Kermartin 3.0'
     
     def add_arguments(self, parser):
         parser.add_argument(
@@ -45,12 +45,12 @@ class Command(BaseCommand):
         """Executa o backup"""
         
         self.stdout.write(
-            self.style.SUCCESS('🔄 Iniciando backup do Melkor 3.0...')
+            self.style.SUCCESS('🔄 Iniciando backup do Kermartin 3.0...')
         )
         
         # Criar diretório de backup
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        backup_dir = os.path.join(options['output_dir'], f'melkor_backup_{timestamp}')
+        backup_dir = os.path.join(options['output_dir'], f'kermartin_backup_{timestamp}')
         os.makedirs(backup_dir, exist_ok=True)
         
         try:
@@ -146,7 +146,7 @@ class Command(BaseCommand):
                 'INSTALLED_APPS': settings.INSTALLED_APPS,
                 'MIDDLEWARE': settings.MIDDLEWARE,
             },
-            'melkor_settings': getattr(settings, 'MELKOR_SETTINGS', {}),
+            'kermartin_settings': getattr(settings, 'KERMARTIN_SETTINGS', {}),
             'openai_model': getattr(settings, 'OPENAI_MODEL', ''),
             'backup_timestamp': datetime.now().isoformat(),
         }
@@ -229,7 +229,7 @@ class Command(BaseCommand):
 class RestoreCommand(BaseCommand):
     """Comando para restaurar backup do sistema"""
     
-    help = 'Restaura backup do sistema Melkor 3.0'
+    help = 'Restaura backup do sistema Kermartin 3.0'
     
     def add_arguments(self, parser):
         parser.add_argument(

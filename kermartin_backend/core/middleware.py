@@ -1,5 +1,5 @@
 """
-Middleware personalizado para Melkor 3.0
+Middleware personalizado para Kermartin 3.0
 """
 
 import time
@@ -9,7 +9,7 @@ from django.http import JsonResponse
 from django.core.cache import cache
 from .models import LogSeguranca
 
-logger = logging.getLogger('melkor')
+logger = logging.getLogger('kermartin')
 
 
 class SecurityMiddleware(MiddlewareMixin):
@@ -227,8 +227,8 @@ class CORSMiddleware(MiddlewareMixin):
         response['X-XSS-Protection'] = '1; mode=block'
         response['Referrer-Policy'] = 'strict-origin-when-cross-origin'
         
-        # Headers específicos do Melkor
-        response['X-Melkor-Version'] = '3.0'
-        response['X-Powered-By'] = 'Melkor AI Legal Analysis'
+        # Headers específicos do Kermartin
+        response['X-Kermartin-Version'] = '3.0'
+        response['X-Powered-By'] = 'Kermartin AI Legal Analysis'
         
         return response

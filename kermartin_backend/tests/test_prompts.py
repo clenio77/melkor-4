@@ -1,10 +1,10 @@
 """
-Testes para o sistema de prompts do Melkor 3.0
+Testes para o sistema de prompts do Kermartin 3.0
 """
 
 import pytest
 from django.test import TestCase
-from ai_engine.prompts import get_prompt, get_prompt_title, MELKOR_PERSONA
+from ai_engine.prompts import get_prompt, get_prompt_title, KERMARTIN_PERSONA
 
 
 class TestPrompts(TestCase):
@@ -26,7 +26,7 @@ class TestPrompts(TestCase):
             titulo = get_prompt_title(1, subetapa)
             
             # Verificar se prompt contém persona
-            self.assertIn("Melkor", prompt)
+            self.assertIn("Kermartin", prompt)
             self.assertIn("advogado criminalista", prompt)
             
             # Verificar se contém documento
@@ -42,7 +42,7 @@ class TestPrompts(TestCase):
             prompt = get_prompt(2, subetapa, self.documento_teste)
             titulo = get_prompt_title(2, subetapa)
             
-            self.assertIn("Melkor", prompt)
+            self.assertIn("Kermartin", prompt)
             self.assertIn(self.documento_teste, prompt)
             self.assertIsNotNone(titulo)
     
@@ -52,7 +52,7 @@ class TestPrompts(TestCase):
             prompt = get_prompt(3, subetapa, self.documento_teste)
             titulo = get_prompt_title(3, subetapa)
             
-            self.assertIn("Melkor", prompt)
+            self.assertIn("Kermartin", prompt)
             self.assertIn(self.documento_teste, prompt)
             self.assertIsNotNone(titulo)
     
@@ -62,7 +62,7 @@ class TestPrompts(TestCase):
             prompt = get_prompt(4, subetapa, self.documento_teste)
             titulo = get_prompt_title(4, subetapa)
             
-            self.assertIn("Melkor", prompt)
+            self.assertIn("Kermartin", prompt)
             self.assertIn(self.documento_teste, prompt)
             self.assertIsNotNone(titulo)
     
@@ -74,12 +74,12 @@ class TestPrompts(TestCase):
         with self.assertRaises(ValueError):
             get_prompt(1, 10, self.documento_teste)  # Subetapa inexistente
     
-    def test_persona_melkor(self):
+    def test_persona_kermartin(self):
         """Testa se persona está bem definida"""
-        self.assertIn("advogado criminalista", MELKOR_PERSONA)
-        self.assertIn("Tribunal do Júri", MELKOR_PERSONA)
-        self.assertIn("experiência", MELKOR_PERSONA)
-        self.assertIn("estratégia", MELKOR_PERSONA)
+        self.assertIn("advogado criminalista", KERMARTIN_PERSONA)
+        self.assertIn("Tribunal do Júri", KERMARTIN_PERSONA)
+        self.assertIn("experiência", KERMARTIN_PERSONA)
+        self.assertIn("estratégia", KERMARTIN_PERSONA)
     
     def test_titulos_especificos(self):
         """Testa títulos específicos dos prompts"""
@@ -162,7 +162,7 @@ class TestPromptIntegration(TestCase):
                 prompt = get_prompt(bloco, subetapa, documento)
                 
                 # Verificar elementos obrigatórios
-                self.assertIn("Melkor", prompt)
+                self.assertIn("Kermartin", prompt)
                 self.assertIn("advogado", prompt)
                 self.assertIn(documento, prompt)
     

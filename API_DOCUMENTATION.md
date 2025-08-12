@@ -1,8 +1,8 @@
-# 📚 DOCUMENTAÇÃO COMPLETA DA API - MELKOR 3.0
+# 📚 DOCUMENTAÇÃO COMPLETA DA API - KERMARTIN 3.0
 
 ## 🎯 Visão Geral
 
-A API do Melkor 3.0 é uma API REST completa para análise jurídica especializada em Tribunal do Júri. Todas as rotas requerem autenticação JWT, exceto onde indicado.
+A API do Kermartin 3.0 é uma API REST completa para análise jurídica especializada em Tribunal do Júri. Todas as rotas requerem autenticação JWT, exceto onde indicado.
 
 **Base URL:** `http://localhost:8000/api/`
 
@@ -411,12 +411,12 @@ Content-Type: application/json
 # 1. Registrar usuário
 curl -X POST http://localhost:8000/api/auth/register/ \
   -H "Content-Type: application/json" \
-  -d '{"email":"test@melkor.com","password":"senha123","nome_completo":"Dr. Teste","oab_numero":"123456","oab_estado":"SP"}'
+  -d '{"email":"test@kermartin.com","password":"senha123","nome_completo":"Dr. Teste","oab_numero":"123456","oab_estado":"SP"}'
 
 # 2. Fazer login
 curl -X POST http://localhost:8000/api/auth/login/ \
   -H "Content-Type: application/json" \
-  -d '{"username":"test@melkor.com","password":"senha123"}'
+  -d '{"username":"test@kermartin.com","password":"senha123"}'
 
 # 3. Criar processo
 curl -X POST http://localhost:8000/api/processos/ \

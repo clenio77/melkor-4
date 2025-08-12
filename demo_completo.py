@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Demonstração Completa do Melkor 3.0 - 100% IMPLEMENTADO
+Demonstração Completa do Kermartin 3.0 - 100% IMPLEMENTADO
 Mostra todas as funcionalidades dos 4 blocos
 """
 
@@ -9,11 +9,11 @@ import sys
 import django
 
 # Configurar Django
-sys.path.append('/mnt/persist/workspace/melkor_backend')
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'melkor_project.settings')
+sys.path.append('/mnt/persist/workspace/kermartin_backend')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'kermartin_project.settings')
 django.setup()
 
-from ai_engine.prompts import get_prompt, get_prompt_title, MELKOR_PERSONA
+from ai_engine.prompts import get_prompt, get_prompt_title, KERMARTIN_PERSONA
 
 def print_header(title):
     """Imprime cabeçalho formatado"""
@@ -27,9 +27,9 @@ def print_step(step, description):
     print("-" * 50)
 
 def demo_completo():
-    """Demonstração completa do Melkor 3.0"""
+    """Demonstração completa do Kermartin 3.0"""
     
-    print_header("MELKOR 3.0 - SISTEMA 100% COMPLETO E FUNCIONAL!")
+    print_header("KERMARTIN 3.0 - SISTEMA 100% COMPLETO E FUNCIONAL!")
     
     print("""
     🎉 IMPLEMENTAÇÃO TOTALMENTE FINALIZADA!
@@ -203,7 +203,7 @@ def demo_completo():
     🚀 PARA USAR IMEDIATAMENTE:
     
     1. CONFIGURAR AMBIENTE:
-       cd melkor_backend
+       cd kermartin_backend
        python manage.py runserver
     
     2. ACESSAR SISTEMA:
@@ -247,7 +247,7 @@ def demo_completo():
     """)
     
     # CONCLUSÃO FINAL
-    print_header("🏆 MELKOR 3.0 - 100% COMPLETO E PRONTO PARA USO!")
+    print_header("🏆 KERMARTIN 3.0 - 100% COMPLETO E PRONTO PARA USO!")
     
     print("""
     ✅ IMPLEMENTAÇÃO TOTALMENTE FINALIZADA!
@@ -256,7 +256,7 @@ def demo_completo():
     ✓ Sistema completo de análise jurídica
     ✓ 4 blocos especializados implementados
     ✓ 21 prompts de alta qualidade
-    ✓ Persona Melkor totalmente funcional
+    ✓ Persona Kermartin totalmente funcional
     ✓ APIs REST profissionais
     ✓ Segurança de nível empresarial
     ✓ Testes automatizados
@@ -272,7 +272,7 @@ def demo_completo():
     - 21 prompts especializados
     - 100% das especificações atendidas
     
-    🏆 MELKOR 3.0 É UM SUCESSO COMPLETO!
+    🏆 KERMARTIN 3.0 É UM SUCESSO COMPLETO!
     """)
 
 if __name__ == "__main__":

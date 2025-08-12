@@ -1,5 +1,5 @@
 """
-Testes para APIs do Melkor 3.0
+Testes para APIs do Kermartin 3.0
 """
 
 import json
@@ -19,7 +19,7 @@ class TestAuthenticationAPI(APITestCase):
         """Testa registro de usuário"""
         url = reverse('authentication:register')
         data = {
-            "email": "test@melkor.com",
+            "email": "test@kermartin.com",
             "password": "senha123",
             "nome_completo": "Dr. João Silva",
             "oab_numero": "123456",
@@ -34,21 +34,21 @@ class TestAuthenticationAPI(APITestCase):
         self.assertIn('user_id', response.data)
         
         # Verificar se usuário foi criado
-        self.assertTrue(User.objects.filter(email="test@melkor.com").exists())
+        self.assertTrue(User.objects.filter(email="test@kermartin.com").exists())
         self.assertTrue(Usuario.objects.filter(oab_numero="123456").exists())
     
     def test_login_user(self):
         """Testa login de usuário"""
         # Criar usuário primeiro
         user = User.objects.create_user(
-            username="test@melkor.com",
-            email="test@melkor.com",
+            username="test@kermartin.com",
+            email="test@kermartin.com",
             password="senha123"
         )
         
         url = reverse('token_obtain_pair')
         data = {
-            "username": "test@melkor.com",
+            "username": "test@kermartin.com",
             "password": "senha123"
         }
         
@@ -95,8 +95,8 @@ class TestProcessoAPI(APITestCase):
     
     def setUp(self):
         self.user = User.objects.create_user(
-            username="test@melkor.com",
-            email="test@melkor.com",
+            username="test@kermartin.com",
+            email="test@kermartin.com",
             password="senha123"
         )
         self.usuario = Usuario.objects.create(
@@ -157,8 +157,8 @@ class TestDocumentoAPI(APITestCase):
     
     def setUp(self):
         self.user = User.objects.create_user(
-            username="test@melkor.com",
-            email="test@melkor.com",
+            username="test@kermartin.com",
+            email="test@kermartin.com",
             password="senha123"
         )
         self.usuario = Usuario.objects.create(
@@ -198,8 +198,8 @@ class TestAnaliseAPI(APITestCase):
     
     def setUp(self):
         self.user = User.objects.create_user(
-            username="test@melkor.com",
-            email="test@melkor.com",
+            username="test@kermartin.com",
+            email="test@kermartin.com",
             password="senha123"
         )
         self.usuario = Usuario.objects.create(
@@ -261,8 +261,8 @@ class TestEstatisticasAPI(APITestCase):
     
     def setUp(self):
         self.user = User.objects.create_user(
-            username="test@melkor.com",
-            email="test@melkor.com",
+            username="test@kermartin.com",
+            email="test@kermartin.com",
             password="senha123"
         )
         self.usuario = Usuario.objects.create(
@@ -303,8 +303,8 @@ class TestSecurityAPI(APITestCase):
         # Aqui apenas verificamos se o endpoint existe
         
         user = User.objects.create_user(
-            username="test@melkor.com",
-            email="test@melkor.com",
+            username="test@kermartin.com",
+            email="test@kermartin.com",
             password="senha123"
         )
         

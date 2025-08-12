@@ -1,0 +1,32 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+  - repo: https://github.com/psf/black
+    rev: 24.4.2
+    hooks:
+      - id: black
+        args: ["--line-length=88"]
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        args: ["--profile=black", "--line-length=88"]
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.0.0
+    hooks:
+      - id: flake8
+
+  # Local hook to run frontend ESLint (requires Node/npm installed)
+  - repo: local
+    hooks:
+      - id: frontend-eslint
+        name: Frontend ESLint (product/frontend)
+        language: system
+        entry: bash -lc 'cd product/frontend && npm run -s lint'
+        pass_filenames: false
+        files: "\.(js|jsx|ts|tsx)$"
